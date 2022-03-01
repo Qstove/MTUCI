@@ -1,0 +1,36 @@
+xcassets:
+  - inputs: DesignKit/Colors.xcassets
+    outputs:
+      - templateName: swift5
+        output: DesignKit/Colors+Generated.swift
+        params:
+          enumName: Colors
+          publicAccess: true
+  - inputs: DesignKit/Glyphs.xcassets
+    outputs:
+      - templateName: swift5
+        output: DesignKit/Glyphs+Generated.swift
+        params:
+          enumName: Glyphs
+          publicAccess: true
+          imageTypeName: Glyph
+          imageAliasName: GlyphsTypeAlias
+  - inputs: DesignKit/Images.xcassets
+    outputs:
+      - templateName: swift5
+        output: DesignKit/Images+Generated.swift
+        params:
+          enumName: Images
+          publicAccess: true
+          imageTypeName: Image
+          imageAliasName: ImageTypeAlias
+  - inputs: DomRF/
+    filter: .+\.xcassets$
+    outputs:
+      - templateName: swift5
+        output: DomRF/Assets+Generated.swift
+        params:
+          enumName: Assets
+
+## For more info, use `swiftgen config doc` to open the full documentation on GitHub.
+## https://github.com/SwiftGen/SwiftGen/tree/6.5.1/Documentation/

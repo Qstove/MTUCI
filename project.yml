@@ -1,0 +1,103 @@
+name: MTUCI
+configs:
+    Release: release
+    Debug: debug
+options:
+  generateEmptyDirectories: true
+  minimumXcodeGenVersion: '2.18.0'
+packages:
+  Moya:
+    url: https://github.com/Moya/Moya.git
+    from: 15.0.0
+  SnapKit:
+    url: https://github.com/SnapKit/SnapKit.git
+    from: 5.0.0
+
+settings:
+    base:
+        SWIFT_VERSION: 5.4
+    configs:
+        Release:
+            ENABLE_TESTABILITY: NO
+            SWIFT_COMPILATION_MODE: wholemodule
+            SWIFT_OPTIMIZATION_LEVEL: -O
+            VALIDATE_PRODUCT: YES
+        Debug:
+            ENABLE_TESTABILITY: YES
+            SWIFT_COMPILATION_MODE: singlefile
+            SWIFT_OPTIMIZATION_LEVEL: -Onone
+            VALIDATE_PRODUCT: NO
+targets:
+    MTUCI:
+        type: application
+        platform: iOS
+        deploymentTarget: 13.0
+        sources:
+            - path: MTUCI
+        dependencies:
+            - package: SnapKit
+            - target: NavigationKit
+            - target: NetworkKit
+        scheme:
+            gatherCoverageData: true
+        settings:
+            base:
+                PRODUCT_BUNDLE_IDENTIFIER: ru.qstove.mtuci
+                ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES: $(inherited)
+                MARKETING_VERSION: 1.0
+                CURRENT_PROJECT_VERSION: 1
+                CODE_SIGN_IDENTITY: iPhone Developer
+                CODE_SIGN_STYLE: Automatic
+                DEVELOPMENT_TEAM: 3F8R878AG7
+                TARGETED_DEVICE_FAMILY: 1
+                INFOPLIST_FILE: MTUCI/SupportFiles/Info.plist
+                ONLY_ACTIVE_ARCH: YES
+                OTHER_LDFLAGS: "$(inherited)"
+                SWIFT_PRECOMPILE_BRIDGING_HEADER: YES
+                CLANG_CXX_LANGUAGE_STANDARD: "gnu++17"
+                CLANG_CXX_LIBRARY: "libc++"
+                CODE_SIGN_ENTITLEMENTS: 
+                ENABLE_BITCODE: NO
+                GCC_PREPROCESSOR_DEFINITIONS: 
+                                - $(inherited)
+                                - WK_WEB_VIEW_ONLY=1
+
+    NavigationKit:
+        type: framework
+        platform: iOS
+        deploymentTarget: 13.0
+        sources:
+            - path: NavigationKit
+        settings:
+            base:
+                PRODUCT_BUNDLE_IDENTIFIER: ru.qstove.mtuci.Navigation
+                MARKETING_VERSION: 1.0
+                GENERATE_INFOPLIST_FILE: YES
+
+    NetworkKit:
+        type: framework
+        platform: iOS
+        deploymentTarget: 13.0
+        sources:
+            - path: NetworkKit
+        settings:
+            base:
+                PRODUCT_BUNDLE_IDENTIFIER: ru.qstove.mtuci.NetworkKit
+                MARKETING_VERSION: 1.0
+                GENERATE_INFOPLIST_FILE: YES
+        dependencies:
+            - package: Moya
+            - target: CoreKit
+
+    CoreKit:
+        type: framework
+        platform: iOS
+        deploymentTarget: 13.0
+        sources:
+            - path: CoreKit
+        settings:
+            base:
+                PRODUCT_BUNDLE_IDENTIFIER: ru.qstove.mtuci.NetworkKit
+                MARKETING_VERSION: 1.0
+                GENERATE_INFOPLIST_FILE: YES
+
