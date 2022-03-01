@@ -5,14 +5,16 @@ import NetworkKit
 
 final class LoginConfigurator {
 
+    private let services: ApplicationServices
     private let stubBehavior: StubBehavior
-
-    init(isStubbed: Bool) {
-        stubBehavior = isStubbed ? .delayed(seconds: 0.5) : .never
+    
+    init(isStubbed: Bool, services: ApplicationServices) {
+        self.stubBehavior = isStubbed ? .delayed(seconds: 0.5) : .never
+        self.services = services
     }
 
     func create(router: LoginRouter) -> UIViewController {
-        let interactor = LoginInteractor()
+        let interactor = LoginInteractor(services: services, stubBehavior: stubBehavior)
         let presenter = LoginPresenter()
         let view = LoginView()
         view.router = router

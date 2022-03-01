@@ -17,6 +17,7 @@ final class LoginView: UIViewController, LoginViewInput {
     private let loginTextField = UITextFieldWithInset()
     private let passwordField = UITextFieldWithInset()
     private let loginButton = ActionButton(style: .indigo)
+    private var loadingVC: LoadingViewController?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,7 +29,6 @@ final class LoginView: UIViewController, LoginViewInput {
         setupSubviews()
         setupLayout()
         bind()
-        
     }
 
     private func setupSubviews() {
@@ -52,10 +52,9 @@ final class LoginView: UIViewController, LoginViewInput {
         passwordField.isSecureTextEntry = true
         view.addSubview(passwordField)
 
+        loginButton.addTarget(self, action: #selector(loginButtonDidTapped), for: .touchUpInside)
         view.addSubview(loginButton)
-
     }
-    
 
     private func setupLayout() {
         mainLabel.snp.makeConstraints {
@@ -89,7 +88,7 @@ final class LoginView: UIViewController, LoginViewInput {
             .weakAssign(to: \.text, on: mainLabel)
             .store(in: &cancellables)
         viewModel.$isLoading
-            .sink(receiveValue: { [weak self] in self?.displayIsLoading(value: $0) })
+            .sink(receiveValue: { [weak self] in self?.displayIsLoading($0) })
             .store(in: &cancellables)
         viewModel.$loginButton
             .sink(receiveValue: { [weak self] in self?.displayButton($0) })
@@ -102,20 +101,29 @@ final class LoginView: UIViewController, LoginViewInput {
         loginButton.isEnabled = value.isEnabled
     }
 
-    private func displayIsLoading(value: Bool) {
-        print(value)
+    private func displayIsLoading(_ isLoading: Bool) {
+        if isLoading {
+            let lvc = LoadingViewController()
+            lvc.modalPresentationStyle = .overCurrentContext
+            lvc.modalTransitionStyle = .crossDissolve
+            present(lvc, animated: true, completion: nil)
+            loadingVC = lvc
+        } else {
+            loadingVC?.dismiss(animated: true, completion: { self.loadingVC = nil  })
+        }
     }
 
-    @objc func segmentAction(_ segmentedControl: UISegmentedControl) {
-        switch (segmentedControl.selectedSegmentIndex) {
-        case 0:
-            break // Uno
-        case 1:
-            break // Dos
-        case 2:
-            break // Tres
-        default:
-            break
-        }
+    @objc private func loginButtonDidTapped() {
+        guard
+            let username = loginTextField.text,
+            let password = passwordField.text,
+            !username.isEmpty && !password.isEmpty else {
+                let alertVC = UIAlertController(title: "Введите логин и пароль!", message: "И попробуйте войти вновь!", preferredStyle: .alert)
+                alertVC.addAction(.init(title: "Хорошо", style: .cancel))
+                present(alertVC, animated: true)
+                return
+            }
+        let request = LoginModule.UseCase.Login.Request(username: username, password: password)
+        interactor?.login(request)
     }
 }

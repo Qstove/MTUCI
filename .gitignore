@@ -5,6 +5,7 @@
 *.xcodeproj/project.pbxproj
 */project.pbxproj/
 *.swift.orig
+*.xcodeproj/project.xcworkspace/xcuserdata/qstove.xcuserdatad/UserInterfaceState.xcuserstate
 
 ## Idea Generated files
 .idea/

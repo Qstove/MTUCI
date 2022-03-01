@@ -31,7 +31,7 @@ class LoginCoordinator: NavigationCoordinator<LoginCoordinator.Route> {
     override func prepareTransition(for route: Route) -> NavigationTransition {
         switch route {
         case .login:
-            let module = LoginConfigurator(isStubbed: isStubbed).create(router: self)
+            let module = LoginConfigurator(isStubbed: isStubbed, services: services).create(router: self)
             return .push(module)
         case .flowPlaceholder:
             let module = UIViewController()

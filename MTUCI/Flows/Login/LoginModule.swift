@@ -4,6 +4,7 @@ import Combine
 
 protocol LoginInteractorInput: AnyObject {
     func load()
+    func login(_ request: LoginModule.UseCase.Login.Request)
 }
 
 protocol LoginPresenterInput: AnyObject {
@@ -24,6 +25,13 @@ enum LoginModule {
     enum UseCase {
         enum Load {
             struct Response { }
+        }
+
+        enum Login {
+            struct Request {
+                let username: String
+                let password: String
+            }
         }
     }
 
