@@ -1,0 +1,12 @@
+{
+  "images" : [
+    {
+      "filename" : "health_sources.svg",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

@@ -1,6 +1,7 @@
 // Created by Anatoly Qstove on 01.03.2022.
 
 import Combine
+import NetworkKit
 
 protocol LoginInteractorInput: AnyObject {
     func load()
@@ -9,11 +10,13 @@ protocol LoginInteractorInput: AnyObject {
 
 protocol LoginPresenterInput: AnyObject {
     func present(_ response: LoginModule.UseCase.Load.Response)
+    func present(_ response: LoginModule.UseCase.Login.Response)
     func presentIsLoading(_ value: Bool)
 }
 
 protocol LoginViewInput: AnyObject {
     var viewModel: LoginModule.ViewModel { get }
+    func displayMain(for person: AuthResponse.Person)
 }
 
 protocol LoginRouter: AnyObject {
@@ -31,6 +34,9 @@ enum LoginModule {
             struct Request {
                 let username: String
                 let password: String
+            }
+            struct Response {
+                let person: AuthResponse.Person
             }
         }
     }
@@ -53,6 +59,6 @@ enum LoginModule {
     }
 
     enum Output {
-
+        case main(person: AuthResponse.Person)
     }
 }

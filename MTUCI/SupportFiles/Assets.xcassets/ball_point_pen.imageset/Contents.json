@@ -1,0 +1,12 @@
+{
+  "images" : [
+    {
+      "filename" : "ball_point_pen.svg",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

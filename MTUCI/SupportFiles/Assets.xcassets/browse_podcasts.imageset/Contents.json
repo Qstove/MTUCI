@@ -1,0 +1,12 @@
+{
+  "images" : [
+    {
+      "filename" : "browse_podcasts.svg",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

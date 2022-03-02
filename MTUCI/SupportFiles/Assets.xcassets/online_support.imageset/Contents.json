@@ -1,0 +1,12 @@
+{
+  "images" : [
+    {
+      "filename" : "online_support.svg",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

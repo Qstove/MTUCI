@@ -29,4 +29,9 @@ extension UIColor {
         return UIColor(hexString: "#4B0082")
     }
 
+    public class var rebeccaPurple : UIColor {
+        return UIColor(hexString: "#663399")
+    }
+
+
 }

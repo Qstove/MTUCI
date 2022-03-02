@@ -4,7 +4,7 @@ import UIKit
 import SnapKit
 import Foundation
 import Combine
-import CoreKit
+import NetworkKit
 
 final class LoginView: UIViewController, LoginViewInput {
 
@@ -25,6 +25,10 @@ final class LoginView: UIViewController, LoginViewInput {
         interactor?.load()
     }
 
+    func displayMain(for person: AuthResponse.Person) {
+        router?.route(output: .main(person: person))
+    }
+
     private func setup() {
         setupSubviews()
         setupLayout()
@@ -33,8 +37,7 @@ final class LoginView: UIViewController, LoginViewInput {
 
     private func setupSubviews() {
         view.backgroundColor = .white
-        let tapGesture = UITapGestureRecognizer(target: self,
-                                                action: #selector(hideKeyboard))
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(hideKeyboard))
         tapGesture.cancelsTouchesInView = false
         view.addGestureRecognizer(tapGesture)
 

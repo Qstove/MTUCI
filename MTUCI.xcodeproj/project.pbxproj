@@ -16,6 +16,30 @@
 		328535BD3A6DD0A77FB4945E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0539F7A2775EF636623F0C10 /* Assets.xcassets */; };
 		34F4753252446D21D60477D3 /* ApplicationKeychainGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = F73AC852D402E1A19DADC575 /* ApplicationKeychainGroup.swift */; };
 		3C09B61DC68F145484BAFB0C /* LoginConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2225F9B6F51A1BC16E8031A /* LoginConfigurator.swift */; };
+		402AF01527CFD38600BDFAC4 /* auth-student-200.json in Resources */ = {isa = PBXBuildFile; fileRef = 402AF01427CFD38600BDFAC4 /* auth-student-200.json */; };
+		402AF01927CFD64800BDFAC4 /* AuthResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 402AF01827CFD64800BDFAC4 /* AuthResponse.swift */; };
+		402AF01E27CFDFB600BDFAC4 /* MoyaProcessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 402AF01D27CFDFB600BDFAC4 /* MoyaProcessor.swift */; };
+		403EC3B827CFE44900BE86C7 /* auth-teacher-200.json in Resources */ = {isa = PBXBuildFile; fileRef = 402AF01627CFD47B00BDFAC4 /* auth-teacher-200.json */; };
+		403EC3BB27CFE83400BE86C7 /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 403EC3BA27CFE83400BE86C7 /* MainCoordinator.swift */; };
+		403EC3BD27CFEC3500BE86C7 /* SheduleCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 403EC3BC27CFEC3500BE86C7 /* SheduleCoordinator.swift */; };
+		403EC3BF27CFEC3E00BE86C7 /* NewsCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 403EC3BE27CFEC3E00BE86C7 /* NewsCoordinator.swift */; };
+		403EC3C127CFEC5000BE86C7 /* ProfileCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 403EC3C027CFEC5000BE86C7 /* ProfileCoordinator.swift */; };
+		403EC3C327CFED7300BE86C7 /* UITabBarController+styled.swift in Sources */ = {isa = PBXBuildFile; fileRef = 403EC3C227CFED7300BE86C7 /* UITabBarController+styled.swift */; };
+		403EC3C927CFFA3300BE86C7 /* NewsModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 403EC3C427CFFA3300BE86C7 /* NewsModule.swift */; };
+		403EC3CA27CFFA3300BE86C7 /* NewsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 403EC3C527CFFA3300BE86C7 /* NewsPresenter.swift */; };
+		403EC3CB27CFFA3300BE86C7 /* NewsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 403EC3C627CFFA3300BE86C7 /* NewsInteractor.swift */; };
+		403EC3CC27CFFA3300BE86C7 /* NewsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 403EC3C727CFFA3300BE86C7 /* NewsView.swift */; };
+		403EC3CD27CFFA3300BE86C7 /* NewsConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 403EC3C827CFFA3300BE86C7 /* NewsConfigurator.swift */; };
+		403EC3D327CFFA4000BE86C7 /* ProfileModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 403EC3CE27CFFA4000BE86C7 /* ProfileModule.swift */; };
+		403EC3D427CFFA4000BE86C7 /* ProfilePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 403EC3CF27CFFA4000BE86C7 /* ProfilePresenter.swift */; };
+		403EC3D527CFFA4000BE86C7 /* ProfileInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 403EC3D027CFFA4000BE86C7 /* ProfileInteractor.swift */; };
+		403EC3D627CFFA4000BE86C7 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 403EC3D127CFFA4000BE86C7 /* ProfileView.swift */; };
+		403EC3D727CFFA4000BE86C7 /* ProfileConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 403EC3D227CFFA4000BE86C7 /* ProfileConfigurator.swift */; };
+		403EC3DD27CFFA4C00BE86C7 /* ScheduleModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 403EC3D827CFFA4C00BE86C7 /* ScheduleModule.swift */; };
+		403EC3DE27CFFA4C00BE86C7 /* SchedulePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 403EC3D927CFFA4C00BE86C7 /* SchedulePresenter.swift */; };
+		403EC3DF27CFFA4C00BE86C7 /* ScheduleInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 403EC3DA27CFFA4C00BE86C7 /* ScheduleInteractor.swift */; };
+		403EC3E027CFFA4C00BE86C7 /* ScheduleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 403EC3DB27CFFA4C00BE86C7 /* ScheduleView.swift */; };
+		403EC3E127CFFA4C00BE86C7 /* ScheduleConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 403EC3DC27CFFA4C00BE86C7 /* ScheduleConfigurator.swift */; };
 		4116CF49697C2793FAA697C9 /* LoginInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16A98DFE905745ACCE1A154E /* LoginInteractor.swift */; };
 		41C0BB5A29706AF404AAC094 /* NetworkKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D022A636D1A00044439650C9 /* NetworkKit.framework */; };
 		4516973FD66AF1FF5FAFD950 /* TransitionPerformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D4B8AB0D010F7B30ACD6226 /* TransitionPerformer.swift */; };
@@ -121,6 +145,30 @@
 		2621AFBAFA1E0674D3199CC6 /* StubBehavior.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StubBehavior.swift; sourceTree = "<group>"; };
 		2741272D84AEB2BA77377CAE /* KeychainQueryable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainQueryable.swift; sourceTree = "<group>"; };
 		38CB28C56905AE8FD1657164 /* UIColor+colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+colors.swift"; sourceTree = "<group>"; };
+		402AF01427CFD38600BDFAC4 /* auth-student-200.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "auth-student-200.json"; sourceTree = "<group>"; };
+		402AF01627CFD47B00BDFAC4 /* auth-teacher-200.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "auth-teacher-200.json"; sourceTree = "<group>"; };
+		402AF01827CFD64800BDFAC4 /* AuthResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthResponse.swift; sourceTree = "<group>"; };
+		402AF01D27CFDFB600BDFAC4 /* MoyaProcessor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoyaProcessor.swift; sourceTree = "<group>"; };
+		403EC3BA27CFE83400BE86C7 /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
+		403EC3BC27CFEC3500BE86C7 /* SheduleCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SheduleCoordinator.swift; sourceTree = "<group>"; };
+		403EC3BE27CFEC3E00BE86C7 /* NewsCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsCoordinator.swift; sourceTree = "<group>"; };
+		403EC3C027CFEC5000BE86C7 /* ProfileCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileCoordinator.swift; sourceTree = "<group>"; };
+		403EC3C227CFED7300BE86C7 /* UITabBarController+styled.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITabBarController+styled.swift"; sourceTree = "<group>"; };
+		403EC3C427CFFA3300BE86C7 /* NewsModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsModule.swift; sourceTree = "<group>"; };
+		403EC3C527CFFA3300BE86C7 /* NewsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsPresenter.swift; sourceTree = "<group>"; };
+		403EC3C627CFFA3300BE86C7 /* NewsInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsInteractor.swift; sourceTree = "<group>"; };
+		403EC3C727CFFA3300BE86C7 /* NewsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsView.swift; sourceTree = "<group>"; };
+		403EC3C827CFFA3300BE86C7 /* NewsConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsConfigurator.swift; sourceTree = "<group>"; };
+		403EC3CE27CFFA4000BE86C7 /* ProfileModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileModule.swift; sourceTree = "<group>"; };
+		403EC3CF27CFFA4000BE86C7 /* ProfilePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilePresenter.swift; sourceTree = "<group>"; };
+		403EC3D027CFFA4000BE86C7 /* ProfileInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileInteractor.swift; sourceTree = "<group>"; };
+		403EC3D127CFFA4000BE86C7 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		403EC3D227CFFA4000BE86C7 /* ProfileConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileConfigurator.swift; sourceTree = "<group>"; };
+		403EC3D827CFFA4C00BE86C7 /* ScheduleModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleModule.swift; sourceTree = "<group>"; };
+		403EC3D927CFFA4C00BE86C7 /* SchedulePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchedulePresenter.swift; sourceTree = "<group>"; };
+		403EC3DA27CFFA4C00BE86C7 /* ScheduleInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleInteractor.swift; sourceTree = "<group>"; };
+		403EC3DB27CFFA4C00BE86C7 /* ScheduleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleView.swift; sourceTree = "<group>"; };
+		403EC3DC27CFFA4C00BE86C7 /* ScheduleConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleConfigurator.swift; sourceTree = "<group>"; };
 		45D5ADF958099EDDC8E03DF3 /* RootApplicationCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootApplicationCoordinator.swift; sourceTree = "<group>"; };
 		4D2D9D5E1DB0C54629832563 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4EB05E9872FBCFE16A1703C4 /* CoreKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CoreKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -143,7 +191,7 @@
 		9A11B366DE39543DBD0C3EFC /* LoadingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingViewController.swift; sourceTree = "<group>"; };
 		A609E258B5C1D5D722BE9AA9 /* UITextFieldWithInset.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITextFieldWithInset.swift; sourceTree = "<group>"; };
 		A6366106786B2B0873DFEDFD /* ApplicationServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationServices.swift; sourceTree = "<group>"; };
-		A6F4A62ECEFCA2CD7E989AA0 /* MTUCI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MTUCI.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A6F4A62ECEFCA2CD7E989AA0 /* MTUCI.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = MTUCI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A9FF9A1A7DBDCEAF20E4606F /* Keychain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Keychain.swift; sourceTree = "<group>"; };
 		B2225F9B6F51A1BC16E8031A /* LoginConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginConfigurator.swift; sourceTree = "<group>"; };
 		B63C4BB260D36AAD9DE3CDC9 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
@@ -206,26 +254,73 @@
 			path = MTUCI;
 			sourceTree = "<group>";
 		};
-		23E93FE0718A297967A0679B /* Subviews */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Subviews;
-			sourceTree = "<group>";
-		};
 		34F32BE4D02AB40E10B593A6 /* AuthService */ = {
 			isa = PBXGroup;
 			children = (
 				76DCBFDDCDF3D89B1047367B /* AuthService.swift */,
-				7B88F166F75611380EF44F85 /* Models */,
-				4F6FF5304087C6F979415896 /* Samples */,
 			);
 			path = AuthService;
+			sourceTree = "<group>";
+		};
+		402AF01327CFD37000BDFAC4 /* AuthService */ = {
+			isa = PBXGroup;
+			children = (
+				402AF01627CFD47B00BDFAC4 /* auth-teacher-200.json */,
+				402AF01427CFD38600BDFAC4 /* auth-student-200.json */,
+			);
+			path = AuthService;
+			sourceTree = "<group>";
+		};
+		402AF01727CFD61F00BDFAC4 /* AuthService */ = {
+			isa = PBXGroup;
+			children = (
+				402AF01827CFD64800BDFAC4 /* AuthResponse.swift */,
+			);
+			path = AuthService;
+			sourceTree = "<group>";
+		};
+		402AF01A27CFD85C00BDFAC4 /* Schedule */ = {
+			isa = PBXGroup;
+			children = (
+				403EC3D827CFFA4C00BE86C7 /* ScheduleModule.swift */,
+				403EC3D927CFFA4C00BE86C7 /* SchedulePresenter.swift */,
+				403EC3DA27CFFA4C00BE86C7 /* ScheduleInteractor.swift */,
+				403EC3DB27CFFA4C00BE86C7 /* ScheduleView.swift */,
+				403EC3DC27CFFA4C00BE86C7 /* ScheduleConfigurator.swift */,
+			);
+			path = Schedule;
+			sourceTree = "<group>";
+		};
+		402AF01B27CFD86B00BDFAC4 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				403EC3CE27CFFA4000BE86C7 /* ProfileModule.swift */,
+				403EC3CF27CFFA4000BE86C7 /* ProfilePresenter.swift */,
+				403EC3D027CFFA4000BE86C7 /* ProfileInteractor.swift */,
+				403EC3D127CFFA4000BE86C7 /* ProfileView.swift */,
+				403EC3D227CFFA4000BE86C7 /* ProfileConfigurator.swift */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		402AF01C27CFD88400BDFAC4 /* News */ = {
+			isa = PBXGroup;
+			children = (
+				403EC3C427CFFA3300BE86C7 /* NewsModule.swift */,
+				403EC3C527CFFA3300BE86C7 /* NewsPresenter.swift */,
+				403EC3C627CFFA3300BE86C7 /* NewsInteractor.swift */,
+				403EC3C727CFFA3300BE86C7 /* NewsView.swift */,
+				403EC3C827CFFA3300BE86C7 /* NewsConfigurator.swift */,
+			);
+			path = News;
 			sourceTree = "<group>";
 		};
 		4A47950B91BD8A3CFEC8E55F /* NetworkKit */ = {
 			isa = PBXGroup;
 			children = (
+				7B88F166F75611380EF44F85 /* Models */,
+				4F6FF5304087C6F979415896 /* Samples */,
+				402AF01D27CFDFB600BDFAC4 /* MoyaProcessor.swift */,
 				D71147D2DD59FECA3B4D6B5D /* Bundle.swift */,
 				8E3C986BAC596C0A912F61D8 /* Endpoint.swift */,
 				2621AFBAFA1E0674D3199CC6 /* StubBehavior.swift */,
@@ -239,6 +334,7 @@
 		4F6FF5304087C6F979415896 /* Samples */ = {
 			isa = PBXGroup;
 			children = (
+				402AF01327CFD37000BDFAC4 /* AuthService */,
 			);
 			path = Samples;
 			sourceTree = "<group>";
@@ -262,7 +358,6 @@
 				1ACADDDFE416BE300C2F613E /* LoginModule.swift */,
 				E1C1B6D8F8A5D1A8DE147E76 /* LoginPresenter.swift */,
 				B63C4BB260D36AAD9DE3CDC9 /* LoginView.swift */,
-				23E93FE0718A297967A0679B /* Subviews */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -270,6 +365,9 @@
 		6B818AA13167D40FD4EC0726 /* Flows */ = {
 			isa = PBXGroup;
 			children = (
+				402AF01C27CFD88400BDFAC4 /* News */,
+				402AF01B27CFD86B00BDFAC4 /* Profile */,
+				402AF01A27CFD85C00BDFAC4 /* Schedule */,
 				5CD98B4F7255FD3A4ED1BEF0 /* Login */,
 			);
 			path = Flows;
@@ -291,6 +389,7 @@
 			isa = PBXGroup;
 			children = (
 				38CB28C56905AE8FD1657164 /* UIColor+colors.swift */,
+				403EC3C227CFED7300BE86C7 /* UITabBarController+styled.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -305,6 +404,7 @@
 		7B88F166F75611380EF44F85 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				402AF01727CFD61F00BDFAC4 /* AuthService */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -387,6 +487,10 @@
 			children = (
 				828D6E04FD2972B9978DDC5E /* LoginCoordinator.swift */,
 				45D5ADF958099EDDC8E03DF3 /* RootApplicationCoordinator.swift */,
+				403EC3BA27CFE83400BE86C7 /* MainCoordinator.swift */,
+				403EC3BC27CFEC3500BE86C7 /* SheduleCoordinator.swift */,
+				403EC3BE27CFEC3E00BE86C7 /* NewsCoordinator.swift */,
+				403EC3C027CFEC5000BE86C7 /* ProfileCoordinator.swift */,
 			);
 			path = Navigation;
 			sourceTree = "<group>";
@@ -414,6 +518,7 @@
 			buildPhases = (
 				80610783875D945DB91A550B /* Sources */,
 				CA37F7450170874F633D322C /* Frameworks */,
+				403EC3B927CFE48200BE86C7 /* Resources */,
 			);
 			buildRules = (
 			);
@@ -491,6 +596,7 @@
 				LastUpgradeCheck = 1200;
 				TargetAttributes = {
 					97EEB7BD937DA59B8BEE377F = {
+						DevelopmentTeam = 3F8R878AG7;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -520,6 +626,15 @@
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		403EC3B927CFE48200BE86C7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				403EC3B827CFE44900BE86C7 /* auth-teacher-200.json in Resources */,
+				402AF01527CFD38600BDFAC4 /* auth-student-200.json in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		B34A13CF3C427F0FF1F44E9B /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -538,20 +653,40 @@
 			files = (
 				6249482B4A8F0753F8DBFDCC /* ActionButton.swift in Sources */,
 				D6E462A0B3CBBDD01B91D24D /* ApiService.swift in Sources */,
+				403EC3DD27CFFA4C00BE86C7 /* ScheduleModule.swift in Sources */,
 				A9A1A5EBD0A825E6D5E5E376 /* AppDelegate.swift in Sources */,
+				403EC3D327CFFA4000BE86C7 /* ProfileModule.swift in Sources */,
 				FF8D8009EFB9468DE881BB9A /* ApplicationServices.swift in Sources */,
 				ADBA4D34DA32ED2666D0988A /* AuthorizationService.swift in Sources */,
 				5F7F3A54455D4829ADDAA6FA /* LoadingViewController.swift in Sources */,
+				403EC3D727CFFA4000BE86C7 /* ProfileConfigurator.swift in Sources */,
 				3C09B61DC68F145484BAFB0C /* LoginConfigurator.swift in Sources */,
+				403EC3E027CFFA4C00BE86C7 /* ScheduleView.swift in Sources */,
+				403EC3C327CFED7300BE86C7 /* UITabBarController+styled.swift in Sources */,
+				403EC3D527CFFA4000BE86C7 /* ProfileInteractor.swift in Sources */,
 				9CE16B01BE0A5F1D0DE828A7 /* LoginCoordinator.swift in Sources */,
+				403EC3D427CFFA4000BE86C7 /* ProfilePresenter.swift in Sources */,
+				403EC3C127CFEC5000BE86C7 /* ProfileCoordinator.swift in Sources */,
 				4116CF49697C2793FAA697C9 /* LoginInteractor.swift in Sources */,
+				403EC3DE27CFFA4C00BE86C7 /* SchedulePresenter.swift in Sources */,
+				403EC3DF27CFFA4C00BE86C7 /* ScheduleInteractor.swift in Sources */,
 				7C29B3A185B05E64035EA0F1 /* LoginModule.swift in Sources */,
+				403EC3CA27CFFA3300BE86C7 /* NewsPresenter.swift in Sources */,
+				403EC3CC27CFFA3300BE86C7 /* NewsView.swift in Sources */,
 				6F9EBF2015818047CCC3E6A1 /* LoginPresenter.swift in Sources */,
 				52528CDCFBAF7363BC2D4F6E /* LoginView.swift in Sources */,
 				FFBB8B63A1AD4F4401F11311 /* RootApplicationCoordinator.swift in Sources */,
+				403EC3CD27CFFA3300BE86C7 /* NewsConfigurator.swift in Sources */,
+				403EC3BD27CFEC3500BE86C7 /* SheduleCoordinator.swift in Sources */,
+				403EC3D627CFFA4000BE86C7 /* ProfileView.swift in Sources */,
+				403EC3C927CFFA3300BE86C7 /* NewsModule.swift in Sources */,
+				403EC3E127CFFA4C00BE86C7 /* ScheduleConfigurator.swift in Sources */,
 				EF3BDD2803A55DD57B45148D /* TextStyle.swift in Sources */,
 				FEAFD9869A3C098BD9AC1FDD /* UIColor+colors.swift in Sources */,
 				B6B016666C922F4067EBD488 /* UITextFieldWithInset.swift in Sources */,
+				403EC3BF27CFEC3E00BE86C7 /* NewsCoordinator.swift in Sources */,
+				403EC3BB27CFE83400BE86C7 /* MainCoordinator.swift in Sources */,
+				403EC3CB27CFFA3300BE86C7 /* NewsInteractor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -576,8 +711,10 @@
 				FE81204D1B4FCC3194F0A76B /* AuthService.swift in Sources */,
 				DA1000698B234A5281302A85 /* AuthTokenPlugin.swift in Sources */,
 				DC77AB1A43834946B55A4B7B /* Bundle.swift in Sources */,
+				402AF01E27CFDFB600BDFAC4 /* MoyaProcessor.swift in Sources */,
 				A01671365E72043E87A4AD98 /* Endpoint.swift in Sources */,
 				F8164F42E4BA354F52503EE1 /* StubBehavior.swift in Sources */,
+				402AF01927CFD64800BDFAC4 /* AuthResponse.swift in Sources */,
 				8B5D9AEAFDF7754599F53D54 /* TargetType.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -663,7 +800,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 7YNMSV2722;
+				DEVELOPMENT_TEAM = 3F8R878AG7;
 				ENABLE_BITCODE = NO;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"$(inherited)",
@@ -835,7 +972,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 7YNMSV2722;
+				DEVELOPMENT_TEAM = 3F8R878AG7;
 				ENABLE_BITCODE = NO;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"$(inherited)",

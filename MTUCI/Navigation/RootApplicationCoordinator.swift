@@ -12,6 +12,8 @@ public final class RootApplicationCoordinator: NSObject {
 
     @PreferencesStored(key: ApplicationPreferencesKey.authenticated)
     private var authenticated: Bool = false
+    private var loginCoordinator: LoginCoordinator?
+    private var mainCoordinator: MainCoordinator?
 
     public init(applicationServices: ApplicationServices, window: UIWindow?) {
         self.applicationServices = applicationServices
@@ -21,27 +23,29 @@ public final class RootApplicationCoordinator: NSObject {
     public func start() {
         let navigationController = UINavigationController()
         navigationController.view.backgroundColor = .indigo
-        startAppropriateCoordinator(with: navigationController)
-        self.window?.rootViewController = navigationController
-        self.window?.makeKeyAndVisible()
-    }
-
-    private func startAppropriateCoordinator(with navigationController: UINavigationController) {
-        if applicationServices.authService.hasPasscode {
-//            startPasscodeCoordinator(with: navigationController)
-        } else {
-            startLoginCoordinator(with: navigationController)
-        }
+        startLoginCoordinator(with: navigationController)
+        window?.rootViewController = navigationController
+        window?.makeKeyAndVisible()
     }
 
     private func startLoginCoordinator(with navigationController: UINavigationController) {
         authenticated = false
-        let loginCoordinator = LoginCoordinator(rootViewController: navigationController, services: applicationServices, isStubbed: true)
-        loginCoordinator.start()
+        loginCoordinator = LoginCoordinator(rootViewController: navigationController, services: applicationServices, isStubbed: true)
+        loginCoordinator?.output = self
+        loginCoordinator?.start()
     }
 
-    private func startAuthenticatedCoordinator(with navigationController: UINavigationController) {
-        self.authenticated = true
+    private func startMainCoordinator(with navigationController: UINavigationController, person: AuthResponse.Person) {
+        mainCoordinator = MainCoordinator(services: applicationServices, navigationController: navigationController, person: person, isStubbed: true)
+        mainCoordinator?.start()
+    }
+}
 
+extension RootApplicationCoordinator: LoginCoordinatorOutput {
+    func loginCoordinatorDidFinish(person: AuthResponse.Person, _ coordinator: LoginCoordinator) {
+        authenticated = true
+        loginCoordinator = nil
+        guard let nc = window?.rootViewController as? UINavigationController else { return }
+        startMainCoordinator(with: nc, person: person)
     }
 }

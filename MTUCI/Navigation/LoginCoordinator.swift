@@ -5,7 +5,7 @@ import UIKit
 import NetworkKit
 
 protocol LoginCoordinatorOutput: AnyObject {
-    func loginCoordinatorDidFinish(_ coordinator: LoginCoordinator)
+    func loginCoordinatorDidFinish(person: AuthResponse.Person, _ coordinator: LoginCoordinator)
 }
 
 class LoginCoordinator: NavigationCoordinator<LoginCoordinator.Route> {
@@ -47,9 +47,8 @@ class LoginCoordinator: NavigationCoordinator<LoginCoordinator.Route> {
 extension LoginCoordinator: LoginRouter {
     func route(output: LoginModule.Output) {
         switch output {
-
+        case .main(let person):
+            self.output?.loginCoordinatorDidFinish(person: person, self)
         }
     }
-
-
 }

@@ -12,6 +12,10 @@ final class LoginPresenter: LoginPresenterInput {
         view?.viewModel.loginButton = .init(title: "Войти", isEnabled: true)
     }
 
+    func present(_ response: LoginModule.UseCase.Login.Response) {
+        view?.displayMain(for: response.person)
+    }
+
     func presentIsLoading(_ value: Bool) {
         view?.viewModel.isLoading = value
     }

@@ -1,0 +1,12 @@
+{
+  "images" : [
+    {
+      "filename" : "circled_play.svg",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}
