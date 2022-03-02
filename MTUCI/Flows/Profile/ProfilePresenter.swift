@@ -7,7 +7,7 @@ final class ProfilePresenter: ProfilePresenterInput {
     weak var view: ProfileViewInput?
 
     func present(_ response: ProfileModule.UseCase.Load.Response) {
-        view?.viewModel.title = "Loaded"
+        view?.viewModel.title = "Профиль"
     }
 
     func presentIsLoading(_ value: Bool) {

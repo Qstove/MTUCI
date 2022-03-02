@@ -30,7 +30,7 @@ enum NewsModule {
 
     final class ViewModel: ObservableObject {
         @Published
-        var title: String? = "News"
+        var title: String?
         @Published
         var isLoading: Bool = false
     }

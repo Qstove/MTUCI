@@ -5,10 +5,12 @@ import NetworkKit
 
 final class NewsConfigurator {
 
+    private let services: ApplicationServices
     private let stubBehavior: StubBehavior
 
-    init(isStubbed: Bool) {
-        stubBehavior = isStubbed ? .delayed(seconds: 0.5) : .never
+    init(isStubbed: Bool, services: ApplicationServices) {
+        self.stubBehavior = isStubbed ? .delayed(seconds: 0.5) : .never
+        self.services = services
     }
 
     func create(router: NewsRouter) -> UIViewController {

@@ -8,10 +8,10 @@ protocol NewsCoordinatorOutput: AnyObject {
     func newsCoordinatorDidFinish(_ coordinator: NewsCoordinator)
 }
 
-class NewsCoordinator: NavigationCoordinator<NewsCoordinator.Route> {
+final class NewsCoordinator: NavigationCoordinator<NewsCoordinator.Route> {
     enum Route {
         case news
-        case flowPlaceholder
+//        case flowPlaceholder
     }
 
     private let services: ApplicationServices
@@ -31,14 +31,20 @@ class NewsCoordinator: NavigationCoordinator<NewsCoordinator.Route> {
     override func prepareTransition(for route: Route) -> NavigationTransition {
         switch route {
         case .news:
-            break
-        case .flowPlaceholder:
-            break
+            let module = NewsConfigurator(isStubbed: isStubbed, services: services).create(router: self)
+            return .push(module)
+//        case .flowPlaceholder:
+//            break
         }
     }
 
     override func start() {
         trigger(route: .news)
     }
+}
 
+extension NewsCoordinator: NewsRouter {
+    func route(output: NewsModule.Output) {
+
+    }
 }

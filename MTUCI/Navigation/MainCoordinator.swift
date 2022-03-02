@@ -23,7 +23,7 @@ final class MainCoordinator {
     }
 
     func start() {
-        let tabVC: UITabBarController = .mtuciStyled
+        let tabVC: UITabBarController = UITabBarController()
 
         let scheduleNavigation = UINavigationController()
         sheduleCoordinator = SheduleCoordinator(
@@ -45,7 +45,7 @@ final class MainCoordinator {
 
         let profileNavigation = UINavigationController()
         profileCoordinator = ProfileCoordinator(
-            rootViewController: newsNavigation,
+            rootViewController: profileNavigation,
             services: services,
             isStubbed: true
         )
@@ -53,6 +53,7 @@ final class MainCoordinator {
         profileNavigation.tabBarItem = UITabBarItem(title: "Профиль", image: UIImage(named: "graduation_cap"), selectedImage: nil)
 
         tabVC.viewControllers = [scheduleNavigation, newsNavigation, profileNavigation]
+        navigationController.setNavigationBarHidden(true, animated: false)
         navigationController.setViewControllers([tabVC], animated: false)
     }
 }

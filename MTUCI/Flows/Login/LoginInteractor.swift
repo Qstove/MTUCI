@@ -24,14 +24,15 @@ final class LoginInteractor: LoginInteractorInput {
         let provider = services.api.provider(for: AuthService.self, stubBehavior: stubBehavior)
         provider.request(.login(username: request.username, password: request.password)) { [weak self] result in
             guard let self = self else { return }
+            self.presenter?.presentIsLoading(false)
             let result: Result<AuthResponse, Error> = MoyaProcessor.DecodableResultProcessor(result)
             switch result {
             case .success(let response):
+                print(response)
                 self.presenter?.present(.init(person: response.person))
             case .failure:
                 break
             }
-            self.presenter?.presentIsLoading(false)
         }
     }
 

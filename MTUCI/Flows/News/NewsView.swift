@@ -12,6 +12,7 @@ final class NewsView: UIViewController, NewsViewInput {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        view.backgroundColor = .white
         setup()
         interactor?.load(.init())
     }

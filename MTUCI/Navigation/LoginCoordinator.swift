@@ -8,7 +8,7 @@ protocol LoginCoordinatorOutput: AnyObject {
     func loginCoordinatorDidFinish(person: AuthResponse.Person, _ coordinator: LoginCoordinator)
 }
 
-class LoginCoordinator: NavigationCoordinator<LoginCoordinator.Route> {
+final class LoginCoordinator: NavigationCoordinator<LoginCoordinator.Route> {
     enum Route {
         case login
         case flowPlaceholder

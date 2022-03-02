@@ -6,12 +6,13 @@ import CoreKit
 import NetworkKit
 import NavigationKit
 
-public final class RootApplicationCoordinator: NSObject {
+final class RootApplicationCoordinator: NSObject {
     private let window: UIWindow?
     private var applicationServices: ApplicationServices
 
     @PreferencesStored(key: ApplicationPreferencesKey.authenticated)
     private var authenticated: Bool = false
+    private var nc: UINavigationController?
     private var loginCoordinator: LoginCoordinator?
     private var mainCoordinator: MainCoordinator?
 
@@ -25,6 +26,7 @@ public final class RootApplicationCoordinator: NSObject {
         navigationController.view.backgroundColor = .indigo
         startLoginCoordinator(with: navigationController)
         window?.rootViewController = navigationController
+        nc = navigationController
         window?.makeKeyAndVisible()
     }
 

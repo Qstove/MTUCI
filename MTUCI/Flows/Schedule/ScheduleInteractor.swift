@@ -8,11 +8,8 @@ final class ScheduleInteractor: ScheduleInteractorInput {
 
     func load(_ request: ScheduleModule.UseCase.Load.Request) {
         presenter?.presentIsLoading(true)
-        DispatchQueue.main.asyncAfter(deadline: .now() + 1) { [weak self] in
-            self?.presenter?.presentIsLoading(false)
-            let response = ScheduleModule.UseCase.Load.Response()
-            self?.presenter?.present(response)
-        }
-
+        presenter?.presentIsLoading(false)
+        let response = ScheduleModule.UseCase.Load.Response()
+        presenter?.present(response)
     }
 }

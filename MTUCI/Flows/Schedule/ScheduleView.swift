@@ -12,6 +12,7 @@ final class ScheduleView: UIViewController, ScheduleViewInput {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        view.backgroundColor = .white
         setup()
         interactor?.load(.init())
     }

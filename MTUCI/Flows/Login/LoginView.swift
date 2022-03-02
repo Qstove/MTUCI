@@ -123,16 +123,17 @@ final class LoginView: UIViewController, LoginViewInput {
     }
 
     @objc private func loginButtonDidTapped() {
-        guard
-            let username = loginTextField.text,
-            let password = passwordField.text,
-            !username.isEmpty && !password.isEmpty else {
-                let alertVC = UIAlertController(title: "Введите логин и пароль!", message: "И попробуйте войти вновь!", preferredStyle: .alert)
-                alertVC.addAction(.init(title: "Хорошо", style: .cancel))
-                present(alertVC, animated: true)
-                return
-            }
-        let request = LoginModule.UseCase.Login.Request(username: username, password: password)
+        //TODO
+//        guard
+//            let username = loginTextField.text,
+//            let password = passwordField.text,
+//            !username.isEmpty && !password.isEmpty else {
+//                let alertVC = UIAlertController(title: "Введите логин и пароль!", message: "И попробуйте войти вновь!", preferredStyle: .alert)
+//                alertVC.addAction(.init(title: "Хорошо", style: .cancel))
+//                present(alertVC, animated: true)
+//                return
+//            }
+        let request = LoginModule.UseCase.Login.Request(username: "", password: "")
         interactor?.login(request)
     }
 

@@ -12,6 +12,7 @@ final class ProfileView: UIViewController, ProfileViewInput {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        view.backgroundColor = .white
         setup()
         interactor?.load(.init())
     }

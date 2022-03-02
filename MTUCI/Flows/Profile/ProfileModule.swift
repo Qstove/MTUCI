@@ -30,7 +30,7 @@ enum ProfileModule {
 
     final class ViewModel: ObservableObject {
         @Published
-        var title: String? = "Profile"
+        var title: String?
         @Published
         var isLoading: Bool = false
     }

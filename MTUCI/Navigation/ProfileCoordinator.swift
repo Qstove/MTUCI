@@ -8,10 +8,10 @@ protocol ProfileCoordinatorOutput: AnyObject {
     func profileCoordinatorDidFinish(_ coordinator: ProfileCoordinator)
 }
 
-class ProfileCoordinator: NavigationCoordinator<ProfileCoordinator.Route> {
+final class ProfileCoordinator: NavigationCoordinator<ProfileCoordinator.Route> {
     enum Route {
         case profile
-        case flowPlaceholder
+//        case flowPlaceholder
     }
 
     private let services: ApplicationServices
@@ -31,14 +31,22 @@ class ProfileCoordinator: NavigationCoordinator<ProfileCoordinator.Route> {
     override func prepareTransition(for route: Route) -> NavigationTransition {
         switch route {
         case .profile:
-            break
-        case .flowPlaceholder:
-            break
+            let module = ProfileConfigurator(isStubbed: isStubbed, services: services).create(router: self)
+            return .push(module)
+//        case .flowPlaceholder:
+//            break
         }
     }
 
     override func start() {
         trigger(route: .profile)
     }
+}
+
+extension ProfileCoordinator: ProfileRouter {
+    func route(output: ProfileModule.Output) {
+        
+    }
+
 
 }

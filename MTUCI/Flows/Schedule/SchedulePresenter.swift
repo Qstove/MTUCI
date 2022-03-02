@@ -7,7 +7,7 @@ final class SchedulePresenter: SchedulePresenterInput {
     weak var view: ScheduleViewInput?
 
     func present(_ response: ScheduleModule.UseCase.Load.Response) {
-        view?.viewModel.title = "Loaded"
+        view?.viewModel.title = "Расписание"
     }
 
     func presentIsLoading(_ value: Bool) {
