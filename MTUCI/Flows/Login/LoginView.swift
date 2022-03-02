@@ -33,6 +33,10 @@ final class LoginView: UIViewController, LoginViewInput {
 
     private func setupSubviews() {
         view.backgroundColor = .white
+        let tapGesture = UITapGestureRecognizer(target: self,
+                                                action: #selector(hideKeyboard))
+        tapGesture.cancelsTouchesInView = false
+        view.addGestureRecognizer(tapGesture)
 
         mainLabel.font = TextStyle.h1.font
         mainLabel.textColor = .indigo
@@ -43,6 +47,7 @@ final class LoginView: UIViewController, LoginViewInput {
         loginTextField.layer.borderColor = UIColor.indigo.cgColor
         loginTextField.layer.borderWidth = 1.0
         loginTextField.layer.cornerRadius = 28
+        loginTextField.delegate = self
         view.addSubview(loginTextField)
 
         passwordField.placeholder = "Пароль"
@@ -50,6 +55,7 @@ final class LoginView: UIViewController, LoginViewInput {
         passwordField.layer.borderWidth = 1.0
         passwordField.layer.cornerRadius = 28
         passwordField.isSecureTextEntry = true
+        passwordField.delegate = self
         view.addSubview(passwordField)
 
         loginButton.addTarget(self, action: #selector(loginButtonDidTapped), for: .touchUpInside)
@@ -125,5 +131,17 @@ final class LoginView: UIViewController, LoginViewInput {
             }
         let request = LoginModule.UseCase.Login.Request(username: username, password: password)
         interactor?.login(request)
+    }
+
+    @objc
+    private func hideKeyboard() {
+        view.endEditing(true)
+    }
+}
+
+extension LoginView: UITextFieldDelegate {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
     }
 }
