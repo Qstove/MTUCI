@@ -8,10 +8,12 @@ public struct AuthResponse: Codable {
 
     public struct Person: Codable {
         public let id: String
-        public let role: String
-        public let firstName: String
-        public let lastName: String
-        public let middleName: String
+        public let role: Role
         public let isActive: Bool
+    }
+
+    public enum Role: String, Codable {
+        case teacher = "TEACHER"
+        case student = "STUDENT"
     }
 }

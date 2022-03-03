@@ -2,6 +2,7 @@
 
 import Foundation
 import UIKit
+import NetworkKit
 import NavigationKit
 
 protocol ProfileCoordinatorOutput: AnyObject {
@@ -13,25 +14,28 @@ final class ProfileCoordinator: NavigationCoordinator<ProfileCoordinator.Route> 
         case profile
 //        case flowPlaceholder
     }
+    weak var output: ProfileCoordinatorOutput?
 
     private let services: ApplicationServices
     private let isStubbed: Bool
-    weak var output: ProfileCoordinatorOutput?
+    private let person: AuthResponse.Person
 
     init(
         rootViewController: UINavigationController,
         services: ApplicationServices,
-        isStubbed: Bool
+        isStubbed: Bool,
+        person: AuthResponse.Person
     ) {
         self.services = services
         self.isStubbed = isStubbed
+        self.person = person
         super.init(rootViewController: rootViewController)
     }
 
     override func prepareTransition(for route: Route) -> NavigationTransition {
         switch route {
         case .profile:
-            let module = ProfileConfigurator(isStubbed: isStubbed, services: services).create(router: self)
+            let module = ProfileConfigurator(isStubbed: isStubbed, services: services).create(router: self, userId: person.id, role: person.role)
             return .push(module)
 //        case .flowPlaceholder:
 //            break

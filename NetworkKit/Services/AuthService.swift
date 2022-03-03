@@ -12,7 +12,7 @@ extension AuthService: TargetType {
     public var path: String {
         switch self {
         case .login:
-            return "v1/auth/login"
+            return "mtuci/api/login"
         }
     }
 
@@ -39,7 +39,8 @@ extension AuthService: TargetType {
 
     public var sampleData: Data {
         //TODO
-        return sample(from: "auth-teacher-200", ofExtension: "json")
+//        return sample(from: "auth-teacher-200", ofExtension: "json")
+        return sample(from: "auth-student-200", ofExtension: "json")
         switch self {
         case .login(let username, _):
             switch username.lowercased() {

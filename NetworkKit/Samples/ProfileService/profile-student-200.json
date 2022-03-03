@@ -1,0 +1,17 @@
+{
+    "profile" : {
+        "firstName": "Кустов",
+        "lastName": "Владимир",
+        "middleName": "Анатольевич",
+        "gender": "MALE",
+        "photoUrl": "",
+        "faculty": "Факультет Разработки под iOS",
+        "course": "4",
+        "averageMark" : "4.6",
+        "contacts": {
+            "email": "vairovich@outlook.com",
+            "phone": "+7(999)996-87-70",
+            "telegram": "@qstove"
+        }
+    }
+}

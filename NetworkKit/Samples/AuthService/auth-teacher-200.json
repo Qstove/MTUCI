@@ -3,9 +3,6 @@
     "person" : {
         "id": "0",
         "role": "TEACHER",
-        "firstName": "Кустов",
-        "lastName": "Анатолий",
-        "middleName": "Владимирович",
         "isActive": true
     }
 }

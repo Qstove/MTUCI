@@ -40,6 +40,15 @@
 		403EC3DF27CFFA4C00BE86C7 /* ScheduleInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 403EC3DA27CFFA4C00BE86C7 /* ScheduleInteractor.swift */; };
 		403EC3E027CFFA4C00BE86C7 /* ScheduleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 403EC3DB27CFFA4C00BE86C7 /* ScheduleView.swift */; };
 		403EC3E127CFFA4C00BE86C7 /* ScheduleConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 403EC3DC27CFFA4C00BE86C7 /* ScheduleConfigurator.swift */; };
+		403EC3E527D0195000BE86C7 /* ProfileService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 403EC3E427D0195000BE86C7 /* ProfileService.swift */; };
+		403EC3E827D01ABB00BE86C7 /* profile-teacher-200.json in Resources */ = {isa = PBXBuildFile; fileRef = 403EC3E727D01ABB00BE86C7 /* profile-teacher-200.json */; };
+		403EC3EA27D01ACA00BE86C7 /* profile-student-200.json in Resources */ = {isa = PBXBuildFile; fileRef = 403EC3E927D01ACA00BE86C7 /* profile-student-200.json */; };
+		403EC3EC27D01D7800BE86C7 /* ProfileTeacherResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 403EC3EB27D01D7800BE86C7 /* ProfileTeacherResponse.swift */; };
+		403EC3EE27D01E3000BE86C7 /* StudentTeacherResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 403EC3ED27D01E3000BE86C7 /* StudentTeacherResponse.swift */; };
+		403EC3F127D03A9D00BE86C7 /* PhotoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 403EC3F027D03A9D00BE86C7 /* PhotoCell.swift */; };
+		403EC3F327D03D6A00BE86C7 /* UniqueCellIdentifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 403EC3F227D03D6A00BE86C7 /* UniqueCellIdentifier.swift */; };
+		403EC3F527D03E5F00BE86C7 /* FullNameCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 403EC3F427D03E5F00BE86C7 /* FullNameCell.swift */; };
+		403EC3F727D0452500BE86C7 /* HeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 403EC3F627D0452500BE86C7 /* HeaderCell.swift */; };
 		4116CF49697C2793FAA697C9 /* LoginInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16A98DFE905745ACCE1A154E /* LoginInteractor.swift */; };
 		41C0BB5A29706AF404AAC094 /* NetworkKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D022A636D1A00044439650C9 /* NetworkKit.framework */; };
 		4516973FD66AF1FF5FAFD950 /* TransitionPerformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D4B8AB0D010F7B30ACD6226 /* TransitionPerformer.swift */; };
@@ -169,6 +178,15 @@
 		403EC3DA27CFFA4C00BE86C7 /* ScheduleInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleInteractor.swift; sourceTree = "<group>"; };
 		403EC3DB27CFFA4C00BE86C7 /* ScheduleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleView.swift; sourceTree = "<group>"; };
 		403EC3DC27CFFA4C00BE86C7 /* ScheduleConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleConfigurator.swift; sourceTree = "<group>"; };
+		403EC3E427D0195000BE86C7 /* ProfileService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileService.swift; sourceTree = "<group>"; };
+		403EC3E727D01ABB00BE86C7 /* profile-teacher-200.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "profile-teacher-200.json"; sourceTree = "<group>"; };
+		403EC3E927D01ACA00BE86C7 /* profile-student-200.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "profile-student-200.json"; sourceTree = "<group>"; };
+		403EC3EB27D01D7800BE86C7 /* ProfileTeacherResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileTeacherResponse.swift; sourceTree = "<group>"; };
+		403EC3ED27D01E3000BE86C7 /* StudentTeacherResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentTeacherResponse.swift; sourceTree = "<group>"; };
+		403EC3F027D03A9D00BE86C7 /* PhotoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCell.swift; sourceTree = "<group>"; };
+		403EC3F227D03D6A00BE86C7 /* UniqueCellIdentifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UniqueCellIdentifier.swift; sourceTree = "<group>"; };
+		403EC3F427D03E5F00BE86C7 /* FullNameCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FullNameCell.swift; sourceTree = "<group>"; };
+		403EC3F627D0452500BE86C7 /* HeaderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderCell.swift; sourceTree = "<group>"; };
 		45D5ADF958099EDDC8E03DF3 /* RootApplicationCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootApplicationCoordinator.swift; sourceTree = "<group>"; };
 		4D2D9D5E1DB0C54629832563 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4EB05E9872FBCFE16A1703C4 /* CoreKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CoreKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -254,14 +272,6 @@
 			path = MTUCI;
 			sourceTree = "<group>";
 		};
-		34F32BE4D02AB40E10B593A6 /* AuthService */ = {
-			isa = PBXGroup;
-			children = (
-				76DCBFDDCDF3D89B1047367B /* AuthService.swift */,
-			);
-			path = AuthService;
-			sourceTree = "<group>";
-		};
 		402AF01327CFD37000BDFAC4 /* AuthService */ = {
 			isa = PBXGroup;
 			children = (
@@ -294,6 +304,7 @@
 		402AF01B27CFD86B00BDFAC4 /* Profile */ = {
 			isa = PBXGroup;
 			children = (
+				403EC3EF27D03A8C00BE86C7 /* Cells */,
 				403EC3CE27CFFA4000BE86C7 /* ProfileModule.swift */,
 				403EC3CF27CFFA4000BE86C7 /* ProfilePresenter.swift */,
 				403EC3D027CFFA4000BE86C7 /* ProfileInteractor.swift */,
@@ -315,17 +326,45 @@
 			path = News;
 			sourceTree = "<group>";
 		};
+		403EC3E227D0192300BE86C7 /* ProfileService */ = {
+			isa = PBXGroup;
+			children = (
+				403EC3EB27D01D7800BE86C7 /* ProfileTeacherResponse.swift */,
+				403EC3ED27D01E3000BE86C7 /* StudentTeacherResponse.swift */,
+			);
+			path = ProfileService;
+			sourceTree = "<group>";
+		};
+		403EC3E627D01A9500BE86C7 /* ProfileService */ = {
+			isa = PBXGroup;
+			children = (
+				403EC3E727D01ABB00BE86C7 /* profile-teacher-200.json */,
+				403EC3E927D01ACA00BE86C7 /* profile-student-200.json */,
+			);
+			path = ProfileService;
+			sourceTree = "<group>";
+		};
+		403EC3EF27D03A8C00BE86C7 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				403EC3F027D03A9D00BE86C7 /* PhotoCell.swift */,
+				403EC3F427D03E5F00BE86C7 /* FullNameCell.swift */,
+				403EC3F627D0452500BE86C7 /* HeaderCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
 		4A47950B91BD8A3CFEC8E55F /* NetworkKit */ = {
 			isa = PBXGroup;
 			children = (
-				7B88F166F75611380EF44F85 /* Models */,
-				4F6FF5304087C6F979415896 /* Samples */,
-				402AF01D27CFDFB600BDFAC4 /* MoyaProcessor.swift */,
 				D71147D2DD59FECA3B4D6B5D /* Bundle.swift */,
 				8E3C986BAC596C0A912F61D8 /* Endpoint.swift */,
+				402AF01D27CFDFB600BDFAC4 /* MoyaProcessor.swift */,
 				2621AFBAFA1E0674D3199CC6 /* StubBehavior.swift */,
 				7BE15962D548A90D39E2B9D4 /* TargetType.swift */,
+				7B88F166F75611380EF44F85 /* Models */,
 				DDCEFBD901FD7ED17C26664C /* Plugins */,
+				4F6FF5304087C6F979415896 /* Samples */,
 				C60488335DFA81792DDA63F9 /* Services */,
 			);
 			path = NetworkKit;
@@ -335,6 +374,7 @@
 			isa = PBXGroup;
 			children = (
 				402AF01327CFD37000BDFAC4 /* AuthService */,
+				403EC3E627D01A9500BE86C7 /* ProfileService */,
 			);
 			path = Samples;
 			sourceTree = "<group>";
@@ -394,16 +434,10 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
-		700511404952173D36CF837E /* ScheduleService */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = ScheduleService;
-			sourceTree = "<group>";
-		};
 		7B88F166F75611380EF44F85 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				403EC3E227D0192300BE86C7 /* ProfileService */,
 				402AF01727CFD61F00BDFAC4 /* AuthService */,
 			);
 			path = Models;
@@ -447,6 +481,7 @@
 				582C59A25AFF017BC89F9306 /* ActionButton.swift */,
 				9A11B366DE39543DBD0C3EFC /* LoadingViewController.swift */,
 				A609E258B5C1D5D722BE9AA9 /* UITextFieldWithInset.swift */,
+				403EC3F227D03D6A00BE86C7 /* UniqueCellIdentifier.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -468,8 +503,8 @@
 		C60488335DFA81792DDA63F9 /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				34F32BE4D02AB40E10B593A6 /* AuthService */,
-				700511404952173D36CF837E /* ScheduleService */,
+				76DCBFDDCDF3D89B1047367B /* AuthService.swift */,
+				403EC3E427D0195000BE86C7 /* ProfileService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -630,6 +665,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				403EC3E827D01ABB00BE86C7 /* profile-teacher-200.json in Resources */,
+				403EC3EA27D01ACA00BE86C7 /* profile-student-200.json in Resources */,
 				403EC3B827CFE44900BE86C7 /* auth-teacher-200.json in Resources */,
 				402AF01527CFD38600BDFAC4 /* auth-student-200.json in Resources */,
 			);
@@ -664,11 +701,13 @@
 				403EC3E027CFFA4C00BE86C7 /* ScheduleView.swift in Sources */,
 				403EC3C327CFED7300BE86C7 /* UITabBarController+styled.swift in Sources */,
 				403EC3D527CFFA4000BE86C7 /* ProfileInteractor.swift in Sources */,
+				403EC3F327D03D6A00BE86C7 /* UniqueCellIdentifier.swift in Sources */,
 				9CE16B01BE0A5F1D0DE828A7 /* LoginCoordinator.swift in Sources */,
 				403EC3D427CFFA4000BE86C7 /* ProfilePresenter.swift in Sources */,
 				403EC3C127CFEC5000BE86C7 /* ProfileCoordinator.swift in Sources */,
 				4116CF49697C2793FAA697C9 /* LoginInteractor.swift in Sources */,
 				403EC3DE27CFFA4C00BE86C7 /* SchedulePresenter.swift in Sources */,
+				403EC3F527D03E5F00BE86C7 /* FullNameCell.swift in Sources */,
 				403EC3DF27CFFA4C00BE86C7 /* ScheduleInteractor.swift in Sources */,
 				7C29B3A185B05E64035EA0F1 /* LoginModule.swift in Sources */,
 				403EC3CA27CFFA3300BE86C7 /* NewsPresenter.swift in Sources */,
@@ -681,9 +720,11 @@
 				403EC3D627CFFA4000BE86C7 /* ProfileView.swift in Sources */,
 				403EC3C927CFFA3300BE86C7 /* NewsModule.swift in Sources */,
 				403EC3E127CFFA4C00BE86C7 /* ScheduleConfigurator.swift in Sources */,
+				403EC3F127D03A9D00BE86C7 /* PhotoCell.swift in Sources */,
 				EF3BDD2803A55DD57B45148D /* TextStyle.swift in Sources */,
 				FEAFD9869A3C098BD9AC1FDD /* UIColor+colors.swift in Sources */,
 				B6B016666C922F4067EBD488 /* UITextFieldWithInset.swift in Sources */,
+				403EC3F727D0452500BE86C7 /* HeaderCell.swift in Sources */,
 				403EC3BF27CFEC3E00BE86C7 /* NewsCoordinator.swift in Sources */,
 				403EC3BB27CFE83400BE86C7 /* MainCoordinator.swift in Sources */,
 				403EC3CB27CFFA3300BE86C7 /* NewsInteractor.swift in Sources */,
@@ -709,11 +750,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				FE81204D1B4FCC3194F0A76B /* AuthService.swift in Sources */,
+				403EC3EC27D01D7800BE86C7 /* ProfileTeacherResponse.swift in Sources */,
 				DA1000698B234A5281302A85 /* AuthTokenPlugin.swift in Sources */,
+				403EC3E527D0195000BE86C7 /* ProfileService.swift in Sources */,
 				DC77AB1A43834946B55A4B7B /* Bundle.swift in Sources */,
 				402AF01E27CFDFB600BDFAC4 /* MoyaProcessor.swift in Sources */,
 				A01671365E72043E87A4AD98 /* Endpoint.swift in Sources */,
 				F8164F42E4BA354F52503EE1 /* StubBehavior.swift in Sources */,
+				403EC3EE27D01E3000BE86C7 /* StudentTeacherResponse.swift in Sources */,
 				402AF01927CFD64800BDFAC4 /* AuthResponse.swift in Sources */,
 				8B5D9AEAFDF7754599F53D54 /* TargetType.swift in Sources */,
 			);

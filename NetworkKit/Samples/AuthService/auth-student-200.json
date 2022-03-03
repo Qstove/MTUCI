@@ -1,11 +1,8 @@
 {
     "token": "1337qstove1337",
     "person" : {
-        "id": "1"
+        "id": "1",
         "role": "STUDENT",
-        "firstName": "Кустов",
-        "lastName": "Владимир",
-        "middleName": "Анатольевич",
         "isActive": true
     }
 }

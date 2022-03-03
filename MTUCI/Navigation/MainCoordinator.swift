@@ -47,7 +47,8 @@ final class MainCoordinator {
         profileCoordinator = ProfileCoordinator(
             rootViewController: profileNavigation,
             services: services,
-            isStubbed: true
+            isStubbed: true,
+            person: person
         )
         profileCoordinator?.start()
         profileNavigation.tabBarItem = UITabBarItem(title: "Профиль", image: UIImage(named: "graduation_cap"), selectedImage: nil)

@@ -13,8 +13,8 @@ final class ProfileConfigurator {
         self.services = services
     }
 
-    func create(router: ProfileRouter) -> UIViewController {
-        let interactor = ProfileInteractor()
+    func create(router: ProfileRouter, userId: String, role: AuthResponse.Role) -> UIViewController {
+        let interactor = ProfileInteractor(services: services, stubBehavior: stubBehavior, userId: userId, role: role)
         let presenter = ProfilePresenter()
         let view = ProfileView()
         view.router = router
