@@ -30,6 +30,7 @@ final class ProfilePresenter: ProfilePresenterInput {
                 lastName: response.teacherProfile.profile.lastName,
                 middleName: response.teacherProfile.profile.middleName
             ),
+            .infoCell(title: "Научное звание", subtitle: response.teacherProfile.profile.status),
             .infoCell(title: "Кафедра", subtitle: response.teacherProfile.profile.department),
             .headerCell(text: "Контакты"),
             .infoCell(title: "Почта", subtitle: response.teacherProfile.profile.contacts.email),
@@ -46,6 +47,7 @@ final class ProfilePresenter: ProfilePresenterInput {
                 lastName: response.studentProfile.profile.lastName,
                 middleName: response.studentProfile.profile.middleName
             ),
+            .infoCell(title: "Учебный статус", subtitle: response.studentProfile.profile.status),
             .infoCell(title: "Факультет", subtitle: response.studentProfile.profile.faculty),
             .infoCell(title: "Средний балл", subtitle: response.studentProfile.profile.averageMark),
             .headerCell(text: "Контакты"),

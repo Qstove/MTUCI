@@ -9,6 +9,7 @@ public struct ProfileTeacherResponse: Codable {
         public let firstName: String
         public let lastName: String
         public let middleName: String
+        public let status: String
         public let gender: String
         public let photoUrl: String?
         public let department: String

@@ -8,6 +8,7 @@ public struct ProfileStudentResponse: Codable {
         public let firstName: String
         public let lastName: String
         public let middleName: String
+        public let status: String
         public let gender: String
         public let photoUrl: String?
         public let faculty: String

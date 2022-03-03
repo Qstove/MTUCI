@@ -3,6 +3,7 @@
         "firstName": "Кустов",
         "lastName": "Анатолий",
         "middleName": "Владимирович",
+        "status": "Доцент",
         "gender": "MALE",
         "photoUrl": "",
         "department": "Кафедра Разработки под iOS",
