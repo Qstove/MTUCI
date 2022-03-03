@@ -28,7 +28,6 @@ final class LoginInteractor: LoginInteractorInput {
             let result: Result<AuthResponse, Error> = MoyaProcessor.DecodableResultProcessor(result)
             switch result {
             case .success(let response):
-                print(response)
                 self.presenter?.present(.init(person: response.person))
             case .failure:
                 break
