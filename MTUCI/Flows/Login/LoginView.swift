@@ -67,7 +67,7 @@ final class LoginView: UIViewController, LoginViewInput {
 
     private func setupLayout() {
         mainLabel.snp.makeConstraints {
-            $0.top.equalToSuperview().offset(100)
+            $0.top.equalToSuperview().offset(200)
             $0.trailing.leading.equalToSuperview()
         }
         loginTextField.snp.makeConstraints {

@@ -13,8 +13,8 @@ final class ScheduleConfigurator {
         self.services = services
     }
 
-    func create(router: ScheduleRouter) -> UIViewController {
-        let interactor = ScheduleInteractor()
+    func create(router: ScheduleRouter, userId: String, role: AuthResponse.Role) -> UIViewController {
+        let interactor = ScheduleInteractor(services: services, stubBehavior: stubBehavior, userId: userId, role: role)
         let presenter = SchedulePresenter()
         let view = ScheduleView()
         view.router = router

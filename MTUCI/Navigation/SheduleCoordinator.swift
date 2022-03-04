@@ -2,6 +2,7 @@
 
 import Foundation
 import UIKit
+import NetworkKit
 import NavigationKit
 
 protocol SheduleCoordinatorOutput: AnyObject {
@@ -13,25 +14,31 @@ final class SheduleCoordinator: NavigationCoordinator<SheduleCoordinator.Route> 
         case shedule
 //        case flowPlaceholder
     }
+    weak var output: SheduleCoordinatorOutput?
 
     private let services: ApplicationServices
     private let isStubbed: Bool
-    weak var output: SheduleCoordinatorOutput?
+    private let userId: String
+    private let role: AuthResponse.Role
 
     init(
         rootViewController: UINavigationController,
         services: ApplicationServices,
-        isStubbed: Bool
+        isStubbed: Bool,
+        userId: String,
+        role: AuthResponse.Role
     ) {
         self.services = services
         self.isStubbed = isStubbed
+        self.userId = userId
+        self.role = role
         super.init(rootViewController: rootViewController)
     }
     
     override func prepareTransition(for route: Route) -> NavigationTransition {
         switch route {
         case .shedule:
-            let module = ScheduleConfigurator(isStubbed: isStubbed, services: services).create(router: self)
+            let module = ScheduleConfigurator(isStubbed: isStubbed, services: services).create(router: self, userId: userId, role: role)
             return .push(module)
 //        case .flowPlaceholder:
 //            break

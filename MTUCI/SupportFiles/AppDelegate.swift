@@ -16,13 +16,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             window: window
         )
 
-        let navigationBarAppearance = UINavigationBar.appearance()
-        navigationBarAppearance.isTranslucent = false
-        navigationBarAppearance.backgroundColor = .indigo
-        navigationBarAppearance.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
-        navigationBarAppearance.setBackgroundImage(UIImage(), for: .default)
-        navigationBarAppearance.shadowImage = UIImage()
-        navigationBarAppearance.tintColor = .black
+        let navBarAppearance = UINavigationBarAppearance()
+        navBarAppearance.configureWithOpaqueBackground()
+        navBarAppearance.backgroundColor = .indigo
+        navBarAppearance.titleTextAttributes = [.foregroundColor : UIColor.white]
+        UINavigationBar.appearance().standardAppearance = navBarAppearance
+        UINavigationBar.appearance().scrollEdgeAppearance = navBarAppearance
 
         rootCoordinator?.start()
         return true

@@ -13,7 +13,6 @@ final class ProfileView: UIViewController, ProfileViewInput {
     private let tableView = UITableView()
     private var loadingVC: LoadingViewController?
 
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .white
@@ -32,7 +31,6 @@ final class ProfileView: UIViewController, ProfileViewInput {
         tableView.separatorStyle = .none
         tableView.delegate = self
         tableView.dataSource = self
-        tableView.isScrollEnabled = false
         tableView.allowsSelection = false
         tableView.register(PhotoCell.self, forCellReuseIdentifier: PhotoCell.reuseIdentifier)
         tableView.register(FullNameCell.self, forCellReuseIdentifier: FullNameCell.reuseIdentifier)

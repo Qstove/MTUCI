@@ -8,6 +8,7 @@ final class SchedulePresenter: SchedulePresenterInput {
 
     func present(_ response: ScheduleModule.UseCase.Load.Response) {
         view?.viewModel.title = "Расписание"
+        view?.viewModel.days = response.schedule.days
     }
 
     func presentIsLoading(_ value: Bool) {

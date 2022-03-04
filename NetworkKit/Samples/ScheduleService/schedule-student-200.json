@@ -1,0 +1,184 @@
+{
+    "days" : [
+        {
+            "name" : "Суббота",
+            "date" : "06.02.2021",
+            "lesson" : {
+                "discipline" : "Математическое моделирование сложных систем",
+                "teacher" : "Таташев А.Г.",
+                "group" : "3MPP1901",
+                "type": "Лекция",
+                "timeStart" : "10:00",
+                "timeEnd" : "17:15",
+                "auditory" : "215 ауд.",
+                "comments" : "",
+                "linkForRemote" : ""
+            }
+        },
+        {
+            "name" : "Суббота",
+            "date" : "13.02.2021",
+            "lesson" : {
+                "discipline" : "Математическое моделирование сложных систем",
+                "teacher" : "Таташев А.Г.",
+                "group" : "3MPP1901",
+                "type": "Л/Р",
+                "timeStart" : "10:00",
+                "timeEnd" : "17:15",
+                "auditory" : "215 ауд.",
+                "comments" : "",
+                "linkForRemote" : ""
+            }
+        },
+        {
+            "name" : "Суббота",
+            "date" : "20.02.2021",
+            "lesson" : {
+                "discipline" : "Управление проектированием информационных систем",
+                "teacher" : "Маклачкова В.В.",
+                "group" : "3MPP1901",
+                "type": "Лекция",
+                "timeStart" : "10:00",
+                "timeEnd" : "17:15",
+                "auditory" : "215 ауд.",
+                "comments" : "",
+                "linkForRemote" : ""
+            }
+        },
+        {
+            "name" : "Суббота",
+            "date" : "27.02.2021",
+            "lesson" : {
+                "discipline" : "Компьютерное зрение",
+                "teacher" : "Махров С.С.",
+                "group" : "3MPP1901",
+                "type": "Лекция",
+                "timeStart" : "10:00",
+                "timeEnd" : "17:15",
+                "auditory" : "215 ауд.",
+                "comments" : "",
+                "linkForRemote" : ""
+            }
+        },
+        {
+            "name" : "Суббота",
+            "date" : "13.03.2021",
+            "lesson" : {
+                "discipline" : "Компьютерное зрение",
+                "teacher" : "Махров С.С.",
+                "group" : "3MPP1901",
+                "type": "П/З",
+                "timeStart" : "10:00",
+                "timeEnd" : "15.15",
+                "auditory" : "215 ауд.",
+                "comments" : "",
+                "linkForRemote" : ""
+            }
+        },
+        {
+            "name" : "Суббота",
+            "date" : "20.03.2021",
+            "lesson" : {
+                "discipline" : "Компьютерное зрение",
+                "teacher" : "Махров С.С.",
+                "group" : "3MPP1901",
+                "type": "П/З",
+                "timeStart" : "10:00",
+                "timeEnd" : "15.15",
+                "auditory" : "215 ауд.",
+                "comments" : "",
+                "linkForRemote" : ""
+            }
+        },
+        {
+            "name" : "Суббота",
+            "date" : "27.03.2021",
+            "lesson" : {
+                "discipline" : "Управление проектированием информационных систем ",
+                "teacher" : "Маклачкова В.В.",
+                "group" : "3MPP1901",
+                "type": "П/З",
+                "timeStart" : "10:00",
+                "timeEnd" : "17:15",
+                "auditory" : "215 ауд.",
+                "comments" : "",
+                "linkForRemote" : ""
+            }
+        },
+        {
+            "name" : "Суббота",
+            "date" : "10.04.2021",
+            "lesson" : {
+                "discipline" : "Распределенные и параллельные вычисления ",
+                "teacher" : "Гематудинов Р.А.",
+                "group" : "3MPP1901",
+                "type": "Лекция",
+                "timeStart" : "10:00",
+                "timeEnd" : "15.15",
+                "auditory" : "215 ауд.",
+                "comments" : "",
+                "linkForRemote" : ""
+            }
+        },
+        {
+            "name" : "Суббота",
+            "date" : "17.04.2021",
+            "lesson" : {
+                "discipline" : "Распределенные и параллельные вычисления ",
+                "teacher" : "Гематудинов Р.А.",
+                "group" : "3MPP1901",
+                "type": "Лекция + П/З",
+                "timeStart" : "10:00",
+                "timeEnd" : "15.15",
+                "auditory" : "215 ауд.",
+                "comments" : "",
+                "linkForRemote" : ""
+            }
+        },
+        {
+            "name" : "Суббота",
+            "date" : "24.04.2021",
+            "lesson" : {
+                "discipline" : "Управление проектированием информационных систем ",
+                "teacher" : "Маклачкова В.В.",
+                "group" : "3MPP1901",
+                "type": "П/З",
+                "timeStart" : "10:00",
+                "timeEnd" : "13:15",
+                "auditory" : "215 ауд.",
+                "comments" : "",
+                "linkForRemote" : ""
+            }
+        },
+        {
+            "name" : "Суббота",
+            "date" : "15.05.2021",
+            "lesson" : {
+                "discipline" : "Защита информации в глобальных сетях ",
+                "teacher" : "Подмена",
+                "group" : "3MPP1901",
+                "type": "Лекция",
+                "timeStart" : "10:00",
+                "timeEnd" : "17:15",
+                "auditory" : "215 ауд.",
+                "comments" : "",
+                "linkForRemote" : ""
+            }
+        },
+        {
+            "name" : "Суббота",
+            "date" : "22.05.2021",
+            "lesson" : {
+                "discipline" : "Защита информации в глобальных сетях ",
+                "teacher" : "Подмена",
+                "group" : "3MPP1901",
+                "type": "Лекция",
+                "timeStart" : "10:00",
+                "timeEnd" : "17:15",
+                "auditory" : "215 ауд.",
+                "comments" : "",
+                "linkForRemote" : ""
+            }
+        }
+    ]
+}

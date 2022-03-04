@@ -1,9 +1,10 @@
 // Created by Anatoly Qstove on 02.03.2022.
 
 import Combine
+import NetworkKit
 
 protocol ScheduleInteractorInput: AnyObject {
-    func load(_ request: ScheduleModule.UseCase.Load.Request)
+    func load()
 }
 
 protocol SchedulePresenterInput: AnyObject {
@@ -23,19 +24,24 @@ enum ScheduleModule {
 
     enum UseCase {
         enum Load {
-            struct Request { }
-            struct Response { }
+            struct Response {
+                let schedule: ScheduleResponse
+            }
         }
     }
 
     final class ViewModel: ObservableObject {
+
         @Published
         var title: String?
         @Published
         var isLoading: Bool = false
+        @Published
+        var days: [ScheduleResponse.Day]?
     }
 
     enum Output {
+
 
     }
 }

@@ -11,7 +11,12 @@ final class ProfileInteractor: ProfileInteractorInput {
     private let services: ApplicationServices
     private let stubBehavior: NetworkKit.StubBehavior
 
-    init(services: ApplicationServices, stubBehavior: NetworkKit.StubBehavior, userId: String, role: AuthResponse.Role) {
+    init(
+        services: ApplicationServices,
+        stubBehavior: NetworkKit.StubBehavior,
+        userId: String,
+        role: AuthResponse.Role
+    ) {
         self.services = services
         self.stubBehavior = stubBehavior
         self.userId = userId
@@ -23,7 +28,6 @@ final class ProfileInteractor: ProfileInteractorInput {
         let provider = services.api.provider(for: ProfileService.self, stubBehavior: stubBehavior)
         provider.request(.profile(userId: userId, role: role.rawValue.lowercased())) { [weak self] result in
             guard let self = self else { return }
-            self.presenter?.presentIsLoading(false)
             switch self.role {
             case .teacher:
                 let result: Result<ProfileTeacherResponse, Error> = MoyaProcessor.DecodableResultProcessor(result)
@@ -44,6 +48,7 @@ final class ProfileInteractor: ProfileInteractorInput {
                     break
                 }
             }
+            self.presenter?.presentIsLoading(false)
         }
     }
 }

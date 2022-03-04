@@ -29,7 +29,9 @@ final class MainCoordinator {
         sheduleCoordinator = SheduleCoordinator(
             rootViewController: scheduleNavigation,
             services: services,
-            isStubbed: true
+            isStubbed: true,
+            userId: person.id,
+            role: person.role
         )
         sheduleCoordinator?.start()
         scheduleNavigation.tabBarItem = UITabBarItem(title: "Расписание ", image: UIImage(named: "bookmark"), selectedImage: nil)
