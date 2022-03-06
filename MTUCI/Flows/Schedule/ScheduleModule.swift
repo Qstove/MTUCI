@@ -33,7 +33,7 @@ enum ScheduleModule {
     final class ViewModel: ObservableObject {
 
         @Published
-        var title: String?
+        var title: String? = "Расписание"
         @Published
         var isLoading: Bool = false
         @Published

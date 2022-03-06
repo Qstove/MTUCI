@@ -31,9 +31,12 @@ final class LessonCell: UITableViewCell {
     }
 
     private func setupViews() {
+        dayContentView.backgroundColor = .white
         dayContentView.layer.cornerRadius = 16
-        dayContentView.layer.borderColor = UIColor.gray.cgColor
-        dayContentView.layer.borderWidth = 1
+        dayContentView.layer.shadowColor = UIColor.gray.cgColor
+        dayContentView.layer.shadowOpacity = 0.5
+        dayContentView.layer.shadowOffset = .zero
+        dayContentView.layer.shadowRadius = 16
         contentView.addSubview(dayContentView)
         infoLabel.numberOfLines = 0
         dayContentView.addSubview(infoLabel)

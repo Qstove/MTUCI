@@ -85,7 +85,6 @@ extension ScheduleView: UITableViewDelegate, UITableViewDataSource {
             endTime: lesson.timeEnd,
             auditory: lesson.auditory
         )
-
         return cell
     }
 

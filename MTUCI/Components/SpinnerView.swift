@@ -7,7 +7,7 @@ final class SpinnerView: UIView {
     private let spinner = UIActivityIndicatorView.init(style: .large)
 
     public func start(on view: UIView) {
-        backgroundColor = .black.withAlphaComponent(0.75)
+        backgroundColor = .black.withAlphaComponent(0.6)
         view.addSubview(self)
         frame = view.bounds
         spinner.color = .white

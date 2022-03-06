@@ -9,12 +9,10 @@ final class ProfilePresenter: ProfilePresenterInput {
     weak var view: ProfileViewInput?
 
     func present(_ response: ProfileModule.UseCase.Load.TeacherResponse) {
-        view?.viewModel.title = "Профиль"
         view?.viewModel.cellTypes = getTeacherCellTypes(response)
     }
 
     func present(_ response: ProfileModule.UseCase.Load.StudentResponse) {
-        view?.viewModel.title = "Профиль"
         view?.viewModel.cellTypes = getStudentCellTypes(response)
     }
 
