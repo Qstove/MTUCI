@@ -20,6 +20,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         navBarAppearance.configureWithOpaqueBackground()
         navBarAppearance.backgroundColor = .indigo
         navBarAppearance.titleTextAttributes = [.foregroundColor : UIColor.white]
+        UIBarButtonItem.appearance().tintColor = .white
         UINavigationBar.appearance().standardAppearance = navBarAppearance
         UINavigationBar.appearance().scrollEdgeAppearance = navBarAppearance
         rootCoordinator?.start()

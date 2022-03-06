@@ -15,7 +15,6 @@ final class ScheduleView: UIViewController, ScheduleViewInput {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .white
         setup()
         interactor?.load()
     }
@@ -27,7 +26,7 @@ final class ScheduleView: UIViewController, ScheduleViewInput {
     }
 
     private func setupSubviews() {
-
+        view.backgroundColor = .white
         if #available(iOS 15.0, *) {
             tableView.sectionHeaderTopPadding = 0
         }
@@ -35,7 +34,6 @@ final class ScheduleView: UIViewController, ScheduleViewInput {
         tableView.separatorStyle = .none
         tableView.delegate = self
         tableView.dataSource = self
-        tableView.allowsSelection = false
         tableView.register(LessonCell.self, forCellReuseIdentifier: LessonCell.reuseIdentifier)
         view.addSubview(tableView)
     }
@@ -74,8 +72,6 @@ extension ScheduleView: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: LessonCell.reuseIdentifier) as? LessonCell else { return UITableViewCell() }
         guard let days = viewModel.days else { return UITableViewCell() }
-//        let allLessons = days.map { $0.lessons }.reduce([], +)
-//        let lesson = allLessons[indexPath.row]
         let lesson = days[indexPath.section].lessons[indexPath.row]
         cell.configure(
             discipline: lesson.discipline,
@@ -95,6 +91,14 @@ extension ScheduleView: UITableViewDelegate, UITableViewDataSource {
         view.configure(date: day.date, dayName: day.name)
         return view
     }
+
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        guard let days = viewModel.days else { return }
+        let lesson = days[indexPath.section].lessons[indexPath.row]
+        router?.route(output: .lessonDetail(model: lesson))
+        tableView.deselectRow(at: indexPath, animated: true)
+    }
+
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         guard let days = viewModel.days else { return 0 }

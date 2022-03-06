@@ -12,6 +12,7 @@ protocol SheduleCoordinatorOutput: AnyObject {
 final class SheduleCoordinator: NavigationCoordinator<SheduleCoordinator.Route> {
     enum Route {
         case shedule
+        case lessonDetail(model: ScheduleResponse.Lesson)
 //        case flowPlaceholder
     }
     weak var output: SheduleCoordinatorOutput?
@@ -40,6 +41,15 @@ final class SheduleCoordinator: NavigationCoordinator<SheduleCoordinator.Route> 
         case .shedule:
             let module = ScheduleConfigurator(isStubbed: isStubbed, services: services).create(router: self, userId: userId, role: role)
             return .push(module)
+        case .lessonDetail(let lessonModel):
+            let module = LessonDetailConfigurator(isStubbed: isStubbed, services: services)
+                .create(
+                    router: self,
+                    userId: userId,
+                    role: role,
+                    lessonModel: lessonModel
+                )
+            return .push(module)
 //        case .flowPlaceholder:
 //            break
         }
@@ -53,6 +63,15 @@ final class SheduleCoordinator: NavigationCoordinator<SheduleCoordinator.Route> 
 
 extension SheduleCoordinator: ScheduleRouter {
     func route(output: ScheduleModule.Output) {
+        switch output {
+        case .lessonDetail(let lessonModel):
+            trigger(route: .lessonDetail(model: lessonModel))
+        }
+    }
+}
+
+extension SheduleCoordinator: LessonDetailRouter {
+    func route(output: LessonDetailModule.Output) {
 
     }
 }

@@ -1,17 +1,17 @@
-// Created by Anatoly Qstove on 02.03.2022.
+// Created by Anatoly Qstove on 06.03.2022.
 
 import UIKit
+import SnapKit
 import Combine
 
-final class ProfileView: UIViewController, ProfileViewInput {
+final class LessonDetailView: UIViewController, LessonDetailViewInput {
 
-    let viewModel = ProfileModule.ViewModel()
-    var interactor: ProfileInteractorInput?
-    weak var router: ProfileRouter?
+    let viewModel = LessonDetailModule.ViewModel()
+    var interactor: LessonDetailInteractorInput?
+    weak var router: LessonDetailRouter?
     private var cancellables: Set<AnyCancellable> = []
 
     private let tableView = UITableView()
-    private var spinnerView : SpinnerView?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,9 +32,8 @@ final class ProfileView: UIViewController, ProfileViewInput {
         tableView.delegate = self
         tableView.dataSource = self
         tableView.allowsSelection = false
-        tableView.register(PhotoCell.self, forCellReuseIdentifier: PhotoCell.reuseIdentifier)
-        tableView.register(FullNameCell.self, forCellReuseIdentifier: FullNameCell.reuseIdentifier)
-        tableView.register(HeaderCell.self, forCellReuseIdentifier: HeaderCell.reuseIdentifier)
+        tableView.register(DisciplineCell.self, forCellReuseIdentifier: DisciplineCell.reuseIdentifier)
+        tableView.register(UrlCell.self, forCellReuseIdentifier: UrlCell.reuseIdentifier)
         view.addSubview(tableView)
     }
 
@@ -48,42 +47,22 @@ final class ProfileView: UIViewController, ProfileViewInput {
         viewModel.$title
             .weakAssign(to: \.title, on: self)
             .store(in: &cancellables)
-        viewModel.$isLoading
-            .sink(receiveValue: { [weak self] in self?.displayIsLoading($0) })
-            .store(in: &cancellables)
         viewModel.$cellTypes
             .receive(on: DispatchQueue.main)
             .sink(receiveValue: { [weak self] _ in self?.tableView.reloadData() })
             .store(in: &cancellables)
     }
-
-    private func displayIsLoading(_ isLoading: Bool) {
-        if isLoading {
-            spinnerView = SpinnerView()
-            spinnerView?.start(on: view)
-        } else {
-            spinnerView?.stop()
-            spinnerView = nil
-        }
-    }
 }
 
-extension ProfileView: UITableViewDelegate, UITableViewDataSource {
+extension LessonDetailView: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cellType = viewModel.cellTypes[indexPath.row]
         switch cellType {
-        case .photoCell(let image, let placeholder):
+        case .disciplineCell(let disciplineName):
             guard
-                let cell = tableView.dequeueReusableCell(withIdentifier: PhotoCell.reuseIdentifier) as? PhotoCell
+                let cell = tableView.dequeueReusableCell(withIdentifier: DisciplineCell.reuseIdentifier) as? DisciplineCell
             else { return UITableViewCell() }
-            let image = image == nil ? placeholder : image
-            cell.configure(image: image)
-            return cell
-        case .fullNameCell(let firstName, let lastName, let middleName):
-            guard
-                let cell = tableView.dequeueReusableCell(withIdentifier: FullNameCell.reuseIdentifier) as? FullNameCell
-            else { return UITableViewCell() }
-            cell.configure(firstName: firstName, lastName: lastName, middleName: middleName)
+            cell.configure(discipline: disciplineName)
             return cell
         case .infoCell(let title, let subtitle):
             let cell = UITableViewCell(style: .value1, reuseIdentifier: UITableViewCell.reuseIdentifier)
@@ -92,13 +71,18 @@ extension ProfileView: UITableViewDelegate, UITableViewDataSource {
             content.secondaryText = subtitle
             cell.contentConfiguration = content
             return cell
-        case .headerCell(let text):
+        case .urlCell(let title, let placeholder, let urlString):
             guard
-                let cell = tableView.dequeueReusableCell(withIdentifier: HeaderCell.reuseIdentifier) as? HeaderCell
+                let cell = tableView.dequeueReusableCell(withIdentifier: UrlCell.reuseIdentifier) as? UrlCell
             else { return UITableViewCell() }
-            cell.configure(text: text)
+            cell.configure(title: title, placeholder: placeholder, urlString: urlString)
             return cell
+        case .commentFieldCell(let title, let text, let commentsIsEditable):
+            return UITableViewCell()
+        case .buttonCell(model: let model):
+            return UITableViewCell()
         }
+            return UITableViewCell()
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

@@ -55,6 +55,13 @@
 		40ADE2D827D1737700763083 /* LessonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40ADE2D727D1737700763083 /* LessonCell.swift */; };
 		40ADE2DE27D4FFD700763083 /* SpinnerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40ADE2DD27D4FFD700763083 /* SpinnerView.swift */; };
 		40ADE2E027D5238C00763083 /* DayHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40ADE2DF27D5238C00763083 /* DayHeaderView.swift */; };
+		40ADE2E727D54E1A00763083 /* LessonDetailModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40ADE2E227D54E1A00763083 /* LessonDetailModule.swift */; };
+		40ADE2E827D54E1A00763083 /* LessonDetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40ADE2E327D54E1A00763083 /* LessonDetailPresenter.swift */; };
+		40ADE2E927D54E1A00763083 /* LessonDetailInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40ADE2E427D54E1A00763083 /* LessonDetailInteractor.swift */; };
+		40ADE2EA27D54E1A00763083 /* LessonDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40ADE2E527D54E1A00763083 /* LessonDetailView.swift */; };
+		40ADE2EB27D54E1A00763083 /* LessonDetailConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40ADE2E627D54E1A00763083 /* LessonDetailConfigurator.swift */; };
+		40ADE2EE27D571A400763083 /* DisciplineCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40ADE2ED27D571A400763083 /* DisciplineCell.swift */; };
+		40ADE2F027D5732500763083 /* UrlCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40ADE2EF27D5732500763083 /* UrlCell.swift */; };
 		4116CF49697C2793FAA697C9 /* LoginInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16A98DFE905745ACCE1A154E /* LoginInteractor.swift */; };
 		41C0BB5A29706AF404AAC094 /* NetworkKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D022A636D1A00044439650C9 /* NetworkKit.framework */; };
 		4516973FD66AF1FF5FAFD950 /* TransitionPerformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D4B8AB0D010F7B30ACD6226 /* TransitionPerformer.swift */; };
@@ -199,6 +206,13 @@
 		40ADE2D727D1737700763083 /* LessonCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonCell.swift; sourceTree = "<group>"; };
 		40ADE2DD27D4FFD700763083 /* SpinnerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpinnerView.swift; sourceTree = "<group>"; };
 		40ADE2DF27D5238C00763083 /* DayHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayHeaderView.swift; sourceTree = "<group>"; };
+		40ADE2E227D54E1A00763083 /* LessonDetailModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonDetailModule.swift; sourceTree = "<group>"; };
+		40ADE2E327D54E1A00763083 /* LessonDetailPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonDetailPresenter.swift; sourceTree = "<group>"; };
+		40ADE2E427D54E1A00763083 /* LessonDetailInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonDetailInteractor.swift; sourceTree = "<group>"; };
+		40ADE2E527D54E1A00763083 /* LessonDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonDetailView.swift; sourceTree = "<group>"; };
+		40ADE2E627D54E1A00763083 /* LessonDetailConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonDetailConfigurator.swift; sourceTree = "<group>"; };
+		40ADE2ED27D571A400763083 /* DisciplineCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisciplineCell.swift; sourceTree = "<group>"; };
+		40ADE2EF27D5732500763083 /* UrlCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UrlCell.swift; sourceTree = "<group>"; };
 		45D5ADF958099EDDC8E03DF3 /* RootApplicationCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootApplicationCoordinator.swift; sourceTree = "<group>"; };
 		4D2D9D5E1DB0C54629832563 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4EB05E9872FBCFE16A1703C4 /* CoreKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CoreKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -392,6 +406,28 @@
 			path = Cells;
 			sourceTree = "<group>";
 		};
+		40ADE2E127D54E0700763083 /* LessonDetail */ = {
+			isa = PBXGroup;
+			children = (
+				40ADE2EC27D5719200763083 /* Cells */,
+				40ADE2E227D54E1A00763083 /* LessonDetailModule.swift */,
+				40ADE2E327D54E1A00763083 /* LessonDetailPresenter.swift */,
+				40ADE2E427D54E1A00763083 /* LessonDetailInteractor.swift */,
+				40ADE2E527D54E1A00763083 /* LessonDetailView.swift */,
+				40ADE2E627D54E1A00763083 /* LessonDetailConfigurator.swift */,
+			);
+			path = LessonDetail;
+			sourceTree = "<group>";
+		};
+		40ADE2EC27D5719200763083 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				40ADE2ED27D571A400763083 /* DisciplineCell.swift */,
+				40ADE2EF27D5732500763083 /* UrlCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
 		4A47950B91BD8A3CFEC8E55F /* NetworkKit */ = {
 			isa = PBXGroup;
 			children = (
@@ -444,6 +480,7 @@
 		6B818AA13167D40FD4EC0726 /* Flows */ = {
 			isa = PBXGroup;
 			children = (
+				40ADE2E127D54E0700763083 /* LessonDetail */,
 				402AF01C27CFD88400BDFAC4 /* News */,
 				402AF01B27CFD86B00BDFAC4 /* Profile */,
 				402AF01A27CFD85C00BDFAC4 /* Schedule */,
@@ -737,6 +774,7 @@
 				403EC3D327CFFA4000BE86C7 /* ProfileModule.swift in Sources */,
 				FF8D8009EFB9468DE881BB9A /* ApplicationServices.swift in Sources */,
 				ADBA4D34DA32ED2666D0988A /* AuthorizationService.swift in Sources */,
+				40ADE2E927D54E1A00763083 /* LessonDetailInteractor.swift in Sources */,
 				5F7F3A54455D4829ADDAA6FA /* LoadingViewController.swift in Sources */,
 				403EC3D727CFFA4000BE86C7 /* ProfileConfigurator.swift in Sources */,
 				3C09B61DC68F145484BAFB0C /* LoginConfigurator.swift in Sources */,
@@ -748,16 +786,21 @@
 				403EC3D427CFFA4000BE86C7 /* ProfilePresenter.swift in Sources */,
 				403EC3C127CFEC5000BE86C7 /* ProfileCoordinator.swift in Sources */,
 				4116CF49697C2793FAA697C9 /* LoginInteractor.swift in Sources */,
+				40ADE2F027D5732500763083 /* UrlCell.swift in Sources */,
+				40ADE2EB27D54E1A00763083 /* LessonDetailConfigurator.swift in Sources */,
 				403EC3DE27CFFA4C00BE86C7 /* SchedulePresenter.swift in Sources */,
 				403EC3F527D03E5F00BE86C7 /* FullNameCell.swift in Sources */,
+				40ADE2EA27D54E1A00763083 /* LessonDetailView.swift in Sources */,
 				40ADE2E027D5238C00763083 /* DayHeaderView.swift in Sources */,
 				40ADE2DE27D4FFD700763083 /* SpinnerView.swift in Sources */,
+				40ADE2E827D54E1A00763083 /* LessonDetailPresenter.swift in Sources */,
 				403EC3DF27CFFA4C00BE86C7 /* ScheduleInteractor.swift in Sources */,
 				7C29B3A185B05E64035EA0F1 /* LoginModule.swift in Sources */,
 				403EC3CA27CFFA3300BE86C7 /* NewsPresenter.swift in Sources */,
 				403EC3CC27CFFA3300BE86C7 /* NewsView.swift in Sources */,
 				6F9EBF2015818047CCC3E6A1 /* LoginPresenter.swift in Sources */,
 				52528CDCFBAF7363BC2D4F6E /* LoginView.swift in Sources */,
+				40ADE2EE27D571A400763083 /* DisciplineCell.swift in Sources */,
 				FFBB8B63A1AD4F4401F11311 /* RootApplicationCoordinator.swift in Sources */,
 				403EC3CD27CFFA3300BE86C7 /* NewsConfigurator.swift in Sources */,
 				403EC3BD27CFEC3500BE86C7 /* SheduleCoordinator.swift in Sources */,
@@ -766,6 +809,7 @@
 				403EC3C927CFFA3300BE86C7 /* NewsModule.swift in Sources */,
 				403EC3E127CFFA4C00BE86C7 /* ScheduleConfigurator.swift in Sources */,
 				403EC3F127D03A9D00BE86C7 /* PhotoCell.swift in Sources */,
+				40ADE2E727D54E1A00763083 /* LessonDetailModule.swift in Sources */,
 				EF3BDD2803A55DD57B45148D /* TextStyle.swift in Sources */,
 				FEAFD9869A3C098BD9AC1FDD /* UIColor+colors.swift in Sources */,
 				B6B016666C922F4067EBD488 /* UITextFieldWithInset.swift in Sources */,

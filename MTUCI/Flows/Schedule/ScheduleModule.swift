@@ -41,7 +41,6 @@ enum ScheduleModule {
     }
 
     enum Output {
-
-
+        case lessonDetail(model: ScheduleResponse.Lesson)
     }
 }

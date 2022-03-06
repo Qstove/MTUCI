@@ -36,6 +36,7 @@ final class MainCoordinator {
         sheduleCoordinator?.start()
         scheduleNavigation.tabBarItem = UITabBarItem(title: "Расписание ", image: UIImage(named: "bookmark"), selectedImage: nil)
 
+/*
         let newsNavigation = UINavigationController()
         newsCoordinator = NewsCoordinator(
             rootViewController: newsNavigation,
@@ -44,7 +45,7 @@ final class MainCoordinator {
         )
         newsCoordinator?.start()
         newsNavigation.tabBarItem = UITabBarItem(title: "Новости", image: UIImage(named: "list"), selectedImage: nil)
-
+*/
         let profileNavigation = UINavigationController()
         profileCoordinator = ProfileCoordinator(
             rootViewController: profileNavigation,
@@ -55,7 +56,7 @@ final class MainCoordinator {
         profileCoordinator?.start()
         profileNavigation.tabBarItem = UITabBarItem(title: "Профиль", image: UIImage(named: "graduation_cap"), selectedImage: nil)
 
-        tabVC.viewControllers = [scheduleNavigation, newsNavigation, profileNavigation]
+        tabVC.viewControllers = [scheduleNavigation, profileNavigation]
         navigationController.setNavigationBarHidden(true, animated: false)
         navigationController.setViewControllers([tabVC], animated: false)
     }
