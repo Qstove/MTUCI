@@ -11,7 +11,7 @@ final class ProfileView: UIViewController, ProfileViewInput {
     private var cancellables: Set<AnyCancellable> = []
 
     private let tableView = UITableView()
-    private var loadingVC: LoadingViewController?
+    private var spinnerView : SpinnerView?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -59,13 +59,11 @@ final class ProfileView: UIViewController, ProfileViewInput {
 
     private func displayIsLoading(_ isLoading: Bool) {
         if isLoading {
-            let lvc = LoadingViewController()
-            lvc.modalPresentationStyle = .overCurrentContext
-            lvc.modalTransitionStyle = .crossDissolve
-            present(lvc, animated: true, completion: nil)
-            loadingVC = lvc
+            spinnerView = SpinnerView()
+            spinnerView?.start(on: view)
         } else {
-            loadingVC?.dismiss(animated: true, completion: { self.loadingVC = nil  })
+            spinnerView?.stop()
+            spinnerView = nil
         }
     }
 }

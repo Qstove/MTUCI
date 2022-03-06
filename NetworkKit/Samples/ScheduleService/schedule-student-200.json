@@ -3,7 +3,7 @@
         {
             "name" : "Суббота",
             "date" : "06.02.2021",
-            "lesson" : {
+            "lessons" : [{
                 "discipline" : "Математическое моделирование сложных систем",
                 "teacher" : "Таташев А.Г.",
                 "group" : "3MPP1901",
@@ -13,12 +13,12 @@
                 "auditory" : "215 ауд.",
                 "comments" : "",
                 "linkForRemote" : ""
-            }
+            }]
         },
         {
             "name" : "Суббота",
             "date" : "13.02.2021",
-            "lesson" : {
+            "lessons" : [{
                 "discipline" : "Математическое моделирование сложных систем",
                 "teacher" : "Таташев А.Г.",
                 "group" : "3MPP1901",
@@ -28,12 +28,12 @@
                 "auditory" : "215 ауд.",
                 "comments" : "",
                 "linkForRemote" : ""
-            }
+            }]
         },
         {
             "name" : "Суббота",
             "date" : "20.02.2021",
-            "lesson" : {
+            "lessons" : [{
                 "discipline" : "Управление проектированием информационных систем",
                 "teacher" : "Маклачкова В.В.",
                 "group" : "3MPP1901",
@@ -43,12 +43,12 @@
                 "auditory" : "215 ауд.",
                 "comments" : "",
                 "linkForRemote" : ""
-            }
+            }]
         },
         {
             "name" : "Суббота",
             "date" : "27.02.2021",
-            "lesson" : {
+            "lessons" : [{
                 "discipline" : "Компьютерное зрение",
                 "teacher" : "Махров С.С.",
                 "group" : "3MPP1901",
@@ -58,12 +58,12 @@
                 "auditory" : "215 ауд.",
                 "comments" : "",
                 "linkForRemote" : ""
-            }
+            }]
         },
         {
             "name" : "Суббота",
             "date" : "13.03.2021",
-            "lesson" : {
+            "lessons" : [{
                 "discipline" : "Компьютерное зрение",
                 "teacher" : "Махров С.С.",
                 "group" : "3MPP1901",
@@ -73,12 +73,12 @@
                 "auditory" : "215 ауд.",
                 "comments" : "",
                 "linkForRemote" : ""
-            }
+            }]
         },
         {
             "name" : "Суббота",
             "date" : "20.03.2021",
-            "lesson" : {
+            "lessons" : [{
                 "discipline" : "Компьютерное зрение",
                 "teacher" : "Махров С.С.",
                 "group" : "3MPP1901",
@@ -88,12 +88,12 @@
                 "auditory" : "215 ауд.",
                 "comments" : "",
                 "linkForRemote" : ""
-            }
+            }]
         },
         {
             "name" : "Суббота",
             "date" : "27.03.2021",
-            "lesson" : {
+            "lessons" : [{
                 "discipline" : "Управление проектированием информационных систем ",
                 "teacher" : "Маклачкова В.В.",
                 "group" : "3MPP1901",
@@ -103,12 +103,12 @@
                 "auditory" : "215 ауд.",
                 "comments" : "",
                 "linkForRemote" : ""
-            }
+            }]
         },
         {
             "name" : "Суббота",
             "date" : "10.04.2021",
-            "lesson" : {
+            "lessons" : [{
                 "discipline" : "Распределенные и параллельные вычисления ",
                 "teacher" : "Гематудинов Р.А.",
                 "group" : "3MPP1901",
@@ -118,12 +118,12 @@
                 "auditory" : "215 ауд.",
                 "comments" : "",
                 "linkForRemote" : ""
-            }
+            }]
         },
         {
             "name" : "Суббота",
             "date" : "17.04.2021",
-            "lesson" : {
+            "lessons" : [{
                 "discipline" : "Распределенные и параллельные вычисления ",
                 "teacher" : "Гематудинов Р.А.",
                 "group" : "3MPP1901",
@@ -133,12 +133,12 @@
                 "auditory" : "215 ауд.",
                 "comments" : "",
                 "linkForRemote" : ""
-            }
+            }]
         },
         {
             "name" : "Суббота",
             "date" : "24.04.2021",
-            "lesson" : {
+            "lessons" : [{
                 "discipline" : "Управление проектированием информационных систем ",
                 "teacher" : "Маклачкова В.В.",
                 "group" : "3MPP1901",
@@ -148,12 +148,12 @@
                 "auditory" : "215 ауд.",
                 "comments" : "",
                 "linkForRemote" : ""
-            }
+            }]
         },
         {
             "name" : "Суббота",
             "date" : "15.05.2021",
-            "lesson" : {
+            "lessons" : [{
                 "discipline" : "Защита информации в глобальных сетях ",
                 "teacher" : "Подмена",
                 "group" : "3MPP1901",
@@ -163,12 +163,12 @@
                 "auditory" : "215 ауд.",
                 "comments" : "",
                 "linkForRemote" : ""
-            }
+            }]
         },
         {
             "name" : "Суббота",
             "date" : "22.05.2021",
-            "lesson" : {
+            "lessons" : [{
                 "discipline" : "Защита информации в глобальных сетях ",
                 "teacher" : "Подмена",
                 "group" : "3MPP1901",
@@ -178,7 +178,7 @@
                 "auditory" : "215 ауд.",
                 "comments" : "",
                 "linkForRemote" : ""
-            }
+            }]
         }
     ]
 }

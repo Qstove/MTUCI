@@ -52,7 +52,9 @@
 		40ADE2D027D162EB00763083 /* schedule-student-200.json in Resources */ = {isa = PBXBuildFile; fileRef = 40ADE2CF27D162EB00763083 /* schedule-student-200.json */; };
 		40ADE2D327D169FE00763083 /* ScheduleResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40ADE2D227D169FE00763083 /* ScheduleResponse.swift */; };
 		40ADE2D527D16B8200763083 /* SheduleService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40ADE2D427D16B8200763083 /* SheduleService.swift */; };
-		40ADE2D827D1737700763083 /* DayCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40ADE2D727D1737700763083 /* DayCell.swift */; };
+		40ADE2D827D1737700763083 /* LessonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40ADE2D727D1737700763083 /* LessonCell.swift */; };
+		40ADE2DE27D4FFD700763083 /* SpinnerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40ADE2DD27D4FFD700763083 /* SpinnerView.swift */; };
+		40ADE2E027D5238C00763083 /* DayHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40ADE2DF27D5238C00763083 /* DayHeaderView.swift */; };
 		4116CF49697C2793FAA697C9 /* LoginInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16A98DFE905745ACCE1A154E /* LoginInteractor.swift */; };
 		41C0BB5A29706AF404AAC094 /* NetworkKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D022A636D1A00044439650C9 /* NetworkKit.framework */; };
 		4516973FD66AF1FF5FAFD950 /* TransitionPerformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D4B8AB0D010F7B30ACD6226 /* TransitionPerformer.swift */; };
@@ -194,7 +196,9 @@
 		40ADE2CF27D162EB00763083 /* schedule-student-200.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "schedule-student-200.json"; sourceTree = "<group>"; };
 		40ADE2D227D169FE00763083 /* ScheduleResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleResponse.swift; sourceTree = "<group>"; };
 		40ADE2D427D16B8200763083 /* SheduleService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SheduleService.swift; sourceTree = "<group>"; };
-		40ADE2D727D1737700763083 /* DayCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayCell.swift; sourceTree = "<group>"; };
+		40ADE2D727D1737700763083 /* LessonCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonCell.swift; sourceTree = "<group>"; };
+		40ADE2DD27D4FFD700763083 /* SpinnerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpinnerView.swift; sourceTree = "<group>"; };
+		40ADE2DF27D5238C00763083 /* DayHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayHeaderView.swift; sourceTree = "<group>"; };
 		45D5ADF958099EDDC8E03DF3 /* RootApplicationCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootApplicationCoordinator.swift; sourceTree = "<group>"; };
 		4D2D9D5E1DB0C54629832563 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4EB05E9872FBCFE16A1703C4 /* CoreKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CoreKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -382,7 +386,8 @@
 		40ADE2D627D1732100763083 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
-				40ADE2D727D1737700763083 /* DayCell.swift */,
+				40ADE2D727D1737700763083 /* LessonCell.swift */,
+				40ADE2DF27D5238C00763083 /* DayHeaderView.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -517,6 +522,7 @@
 				9A11B366DE39543DBD0C3EFC /* LoadingViewController.swift */,
 				A609E258B5C1D5D722BE9AA9 /* UITextFieldWithInset.swift */,
 				403EC3F227D03D6A00BE86C7 /* UniqueCellIdentifier.swift */,
+				40ADE2DD27D4FFD700763083 /* SpinnerView.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -744,6 +750,8 @@
 				4116CF49697C2793FAA697C9 /* LoginInteractor.swift in Sources */,
 				403EC3DE27CFFA4C00BE86C7 /* SchedulePresenter.swift in Sources */,
 				403EC3F527D03E5F00BE86C7 /* FullNameCell.swift in Sources */,
+				40ADE2E027D5238C00763083 /* DayHeaderView.swift in Sources */,
+				40ADE2DE27D4FFD700763083 /* SpinnerView.swift in Sources */,
 				403EC3DF27CFFA4C00BE86C7 /* ScheduleInteractor.swift in Sources */,
 				7C29B3A185B05E64035EA0F1 /* LoginModule.swift in Sources */,
 				403EC3CA27CFFA3300BE86C7 /* NewsPresenter.swift in Sources */,
@@ -753,7 +761,7 @@
 				FFBB8B63A1AD4F4401F11311 /* RootApplicationCoordinator.swift in Sources */,
 				403EC3CD27CFFA3300BE86C7 /* NewsConfigurator.swift in Sources */,
 				403EC3BD27CFEC3500BE86C7 /* SheduleCoordinator.swift in Sources */,
-				40ADE2D827D1737700763083 /* DayCell.swift in Sources */,
+				40ADE2D827D1737700763083 /* LessonCell.swift in Sources */,
 				403EC3D627CFFA4000BE86C7 /* ProfileView.swift in Sources */,
 				403EC3C927CFFA3300BE86C7 /* NewsModule.swift in Sources */,
 				403EC3E127CFFA4C00BE86C7 /* ScheduleConfigurator.swift in Sources */,

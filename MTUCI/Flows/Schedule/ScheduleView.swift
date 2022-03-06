@@ -11,8 +11,8 @@ final class ScheduleView: UIViewController, ScheduleViewInput {
     private var cancellables: Set<AnyCancellable> = []
 
     private let tableView = UITableView()
-    private var loadingVC: LoadingViewController?
-
+    private var spinnerView : SpinnerView?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .white
@@ -27,12 +27,16 @@ final class ScheduleView: UIViewController, ScheduleViewInput {
     }
 
     private func setupSubviews() {
+
+        if #available(iOS 15.0, *) {
+            tableView.sectionHeaderTopPadding = 0
+        }
         tableView.backgroundColor = .white
         tableView.separatorStyle = .none
         tableView.delegate = self
         tableView.dataSource = self
         tableView.allowsSelection = false
-        tableView.register(DayCell.self, forCellReuseIdentifier: DayCell.reuseIdentifier)
+        tableView.register(LessonCell.self, forCellReuseIdentifier: LessonCell.reuseIdentifier)
         view.addSubview(tableView)
     }
 
@@ -57,36 +61,49 @@ final class ScheduleView: UIViewController, ScheduleViewInput {
 
     private func displayIsLoading(_ isLoading: Bool) {
         if isLoading {
-            let lvc = LoadingViewController()
-            lvc.modalPresentationStyle = .overCurrentContext
-            lvc.modalTransitionStyle = .crossDissolve
-            present(lvc, animated: true, completion: nil)
-            loadingVC = lvc
+            spinnerView = SpinnerView()
+            spinnerView?.start(on: view)
         } else {
-            loadingVC?.dismiss(animated: true, completion: { self.loadingVC = nil  })
+            spinnerView?.stop()
+            spinnerView = nil
         }
     }
 }
 
 extension ScheduleView: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: DayCell.reuseIdentifier) as? DayCell else { return UITableViewCell() }
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: LessonCell.reuseIdentifier) as? LessonCell else { return UITableViewCell() }
         guard let days = viewModel.days else { return UITableViewCell() }
-        let day = days[indexPath.row]
+//        let allLessons = days.map { $0.lessons }.reduce([], +)
+//        let lesson = allLessons[indexPath.row]
+        let lesson = days[indexPath.section].lessons[indexPath.row]
         cell.configure(
-            date: day.date,
-            day: day.name,
-            discipline: day.lesson.discipline,
-            teacherGroup: day.lesson.teacher,
-            lessonType: day.lesson.type,
-            startTime: day.lesson.timeStart,
-            endTime: day.lesson.timeEnd,
-            auditory: day.lesson.auditory
+            discipline: lesson.discipline,
+            teacherGroup: lesson.teacher,
+            lessonType: lesson.type,
+            startTime: lesson.timeStart,
+            endTime: lesson.timeEnd,
+            auditory: lesson.auditory
         )
+
         return cell
     }
 
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        guard let days = viewModel.days else { return UITableViewCell() }
+        let day = days[section]
+        let view = DayHeaderView()
+        view.configure(date: day.date, dayName: day.name)
+        return view
+    }
+
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return viewModel.days?.count ?? 0
+        guard let days = viewModel.days else { return 0 }
+        return days[section].lessons.count
+    }
+
+    func numberOfSections(in tableView: UITableView) -> Int {
+        guard let days = viewModel.days else { return 0 }
+        return days.count
     }
 }

@@ -17,7 +17,7 @@ final class LoginView: UIViewController, LoginViewInput {
     private let loginTextField = UITextFieldWithInset()
     private let passwordField = UITextFieldWithInset()
     private let loginButton = ActionButton(style: .indigo)
-    private var loadingVC: LoadingViewController?
+    private var spinnerView : SpinnerView?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -112,18 +112,15 @@ final class LoginView: UIViewController, LoginViewInput {
 
     private func displayIsLoading(_ isLoading: Bool) {
         if isLoading {
-            let lvc = LoadingViewController()
-            lvc.modalPresentationStyle = .overCurrentContext
-            lvc.modalTransitionStyle = .crossDissolve
-            present(lvc, animated: true, completion: nil)
-            loadingVC = lvc
+            spinnerView = SpinnerView()
+            spinnerView?.start(on: view)
         } else {
-            loadingVC?.dismiss(animated: true, completion: { self.loadingVC = nil  })
+            spinnerView?.stop()
+            spinnerView = nil
         }
     }
 
     @objc private func loginButtonDidTapped() {
-        //TODO
 //        guard
 //            let username = loginTextField.text,
 //            let password = passwordField.text,
@@ -133,7 +130,8 @@ final class LoginView: UIViewController, LoginViewInput {
 //                present(alertVC, animated: true)
 //                return
 //            }
-        let request = LoginModule.UseCase.Login.Request(username: "", password: "")
+        let request = LoginModule.UseCase.Login.Request(username: "Student", password: "")
+//        let request = LoginModule.UseCase.Login.Request(username: username, password: password)
         interactor?.login(request)
     }
 

@@ -8,7 +8,7 @@ public struct ScheduleResponse: Codable {
     public struct Day: Codable {
         public let name: String
         public let date: String
-        public let lesson: Lesson
+        public let lessons: [Lesson]
     }
 
     public struct Lesson: Codable {

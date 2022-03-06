@@ -21,8 +21,8 @@ extension UIColor {
         self.init(red: CGFloat(r) / 255, green: CGFloat(g) / 255, blue: CGFloat(b) / 255, alpha: CGFloat(a) / 255)
     }
 
-    public class var dodgerBlue : UIColor {
-        return UIColor(hexString: "#1E90FF")
+    public class var royalBlue : UIColor {
+        return UIColor(hexString: "#4169E1")
     }
 
     public class var indigo : UIColor {
@@ -32,6 +32,4 @@ extension UIColor {
     public class var rebeccaPurple : UIColor {
         return UIColor(hexString: "#663399")
     }
-
-
 }
