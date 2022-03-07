@@ -27,7 +27,7 @@ enum LessonDetailModule {
         case infoCell(title: String, subtitle: String)
         case urlCell(title: String, placeholder: String, urlString: String?)
         case commentFieldCell(title: String, text: String?, commentsIsEditable: Bool)
-        case buttonCell(model: ViewModel.ActionButton)
+        case buttonCell(title: String)
     }
 
     enum UseCase {
@@ -40,11 +40,6 @@ enum LessonDetailModule {
     }
 
     final class ViewModel: ObservableObject {
-        struct ActionButton {
-            var title: String
-            var isEnabled: Bool
-        }
-
         @Published
         var title: String? = "LessonDetail"
         @Published

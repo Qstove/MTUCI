@@ -69,7 +69,7 @@
                 "group" : "3MPP1901",
                 "type": "П/З",
                 "timeStart" : "10:00",
-                "timeEnd" : "15.15",
+                "timeEnd" : "15:15",
                 "auditory" : "215 ауд.",
                 "comments" : "",
                 "linkForRemote" : ""
@@ -84,7 +84,7 @@
                 "group" : "3MPP1901",
                 "type": "П/З",
                 "timeStart" : "10:00",
-                "timeEnd" : "15.15",
+                "timeEnd" : "15:15",
                 "auditory" : "215 ауд.",
                 "comments" : "",
                 "linkForRemote" : ""
@@ -114,7 +114,7 @@
                 "group" : "3MPP1901",
                 "type": "Лекция",
                 "timeStart" : "10:00",
-                "timeEnd" : "15.15",
+                "timeEnd" : "15:15",
                 "auditory" : "215 ауд.",
                 "comments" : "",
                 "linkForRemote" : ""
@@ -129,7 +129,7 @@
                 "group" : "3MPP1901",
                 "type": "Лекция + П/З",
                 "timeStart" : "10:00",
-                "timeEnd" : "15.15",
+                "timeEnd" : "15:15",
                 "auditory" : "215 ауд.",
                 "comments" : "",
                 "linkForRemote" : ""

@@ -4,7 +4,7 @@ import Foundation
 import Moya
 
 public enum ScheduleService {
-    case schedule(userId: String, role: String)
+    case schedule(userId: String, role: AuthResponse.Role)
 }
 
 extension ScheduleService: TargetType {
@@ -36,14 +36,12 @@ extension ScheduleService: TargetType {
 
     public var sampleData: Data {
         switch self {
-        case .schedule(let userId, _):
-            switch userId {
-            case "0":
+        case .schedule(_, let role):
+            switch role {
+            case .teacher :
                 return sample(from: "schedule-teacher-200", ofExtension: "json")
-            case "1":
+            case .student:
                 return sample(from: "schedule-student-200", ofExtension: "json")
-            default:
-                return Data()
             }
         }
     }

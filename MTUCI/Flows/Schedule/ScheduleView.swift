@@ -75,7 +75,7 @@ extension ScheduleView: UITableViewDelegate, UITableViewDataSource {
         let lesson = days[indexPath.section].lessons[indexPath.row]
         cell.configure(
             discipline: lesson.discipline,
-            teacherGroup: lesson.teacher,
+            teacherGroup: viewModel.role == .teacher ? lesson.group : lesson.teacher,
             lessonType: lesson.type,
             startTime: lesson.timeStart,
             endTime: lesson.timeEnd,

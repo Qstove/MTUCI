@@ -26,6 +26,7 @@ enum ScheduleModule {
         enum Load {
             struct Response {
                 let schedule: ScheduleResponse
+                let role: AuthResponse.Role
             }
         }
     }
@@ -38,6 +39,7 @@ enum ScheduleModule {
         var isLoading: Bool = false
         @Published
         var days: [ScheduleResponse.Day]?
+        var role: AuthResponse.Role?
     }
 
     enum Output {

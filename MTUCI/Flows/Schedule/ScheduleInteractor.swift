@@ -27,12 +27,12 @@ final class ScheduleInteractor: ScheduleInteractorInput {
 
         presenter?.presentIsLoading(true)
         let provider = services.api.provider(for: ScheduleService.self, stubBehavior: stubBehavior)
-        provider.request(.schedule(userId: userId, role: role.rawValue.lowercased())) { [weak self] result in
+        provider.request(.schedule(userId: userId, role: role)) { [weak self] result in
             guard let self = self else { return }
             let result: Result<ScheduleResponse, Error> = MoyaProcessor.DecodableResultProcessor(result)
             switch result {
             case .success(let response):
-                let response = ScheduleModule.UseCase.Load.Response(schedule: response)
+                let response = ScheduleModule.UseCase.Load.Response(schedule: response, role: self.role)
                 self.presenter?.present(response)
                 break
             case .failure:

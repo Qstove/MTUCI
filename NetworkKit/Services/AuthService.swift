@@ -41,9 +41,9 @@ extension AuthService: TargetType {
         switch self {
         case .login(let username, _):
             switch username.lowercased() {
-            case "teacher":
+            case "t":
                 return sample(from: "auth-teacher-200", ofExtension: "json")
-            case "student":
+            case "s":
                 return sample(from: "auth-student-200", ofExtension: "json")
             default:
                 return Data()

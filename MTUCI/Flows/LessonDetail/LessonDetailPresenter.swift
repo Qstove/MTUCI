@@ -17,14 +17,14 @@ final class LessonDetailPresenter: LessonDetailPresenterInput {
         return [
             .disciplineCell(disciplineName: response.lesson.discipline),
             .infoCell(
-                title: response.role == .teacher ? " Преподаватель:" : "Группа: ",
+                title: response.role == .teacher ? "Группа:" : "Преподаватель: ",
                 subtitle: response.role == .teacher ? response.lesson.group : response.lesson.teacher),
             .infoCell(title: "Начало:", subtitle: response.lesson.timeStart),
             .infoCell(title: "Окончание:", subtitle: response.lesson.timeEnd),
             .infoCell(title: "Аудитория:", subtitle: response.lesson.auditory),
             .urlCell(title: "Ссылка для удаленного доступа", placeholder: "Не указано", urlString: response.lesson.linkForRemote),
             .commentFieldCell(title: "Комментарий", text: response.lesson.comments, commentsIsEditable: response.role == .teacher),
-            .buttonCell(model: .init(title: "Сохранить комментарий", isEnabled: true))
-        ]
+            response.role == .teacher ? .buttonCell(title: "Сохранить комментарий") : nil
+        ].compactMap { $0 }
     }
 }

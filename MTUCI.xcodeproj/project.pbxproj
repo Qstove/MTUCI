@@ -62,6 +62,9 @@
 		40ADE2EB27D54E1A00763083 /* LessonDetailConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40ADE2E627D54E1A00763083 /* LessonDetailConfigurator.swift */; };
 		40ADE2EE27D571A400763083 /* DisciplineCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40ADE2ED27D571A400763083 /* DisciplineCell.swift */; };
 		40ADE2F027D5732500763083 /* UrlCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40ADE2EF27D5732500763083 /* UrlCell.swift */; };
+		40ADE2F227D57F6A00763083 /* ButtonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40ADE2F127D57F6A00763083 /* ButtonCell.swift */; };
+		40ADE2F427D5819300763083 /* CommentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40ADE2F327D5819300763083 /* CommentCell.swift */; };
+		40ADE2F627D58E6A00763083 /* schedule-teacher-200.json in Resources */ = {isa = PBXBuildFile; fileRef = 40ADE2F527D58E6A00763083 /* schedule-teacher-200.json */; };
 		4116CF49697C2793FAA697C9 /* LoginInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16A98DFE905745ACCE1A154E /* LoginInteractor.swift */; };
 		41C0BB5A29706AF404AAC094 /* NetworkKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D022A636D1A00044439650C9 /* NetworkKit.framework */; };
 		4516973FD66AF1FF5FAFD950 /* TransitionPerformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D4B8AB0D010F7B30ACD6226 /* TransitionPerformer.swift */; };
@@ -213,6 +216,9 @@
 		40ADE2E627D54E1A00763083 /* LessonDetailConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonDetailConfigurator.swift; sourceTree = "<group>"; };
 		40ADE2ED27D571A400763083 /* DisciplineCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisciplineCell.swift; sourceTree = "<group>"; };
 		40ADE2EF27D5732500763083 /* UrlCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UrlCell.swift; sourceTree = "<group>"; };
+		40ADE2F127D57F6A00763083 /* ButtonCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonCell.swift; sourceTree = "<group>"; };
+		40ADE2F327D5819300763083 /* CommentCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentCell.swift; sourceTree = "<group>"; };
+		40ADE2F527D58E6A00763083 /* schedule-teacher-200.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "schedule-teacher-200.json"; sourceTree = "<group>"; };
 		45D5ADF958099EDDC8E03DF3 /* RootApplicationCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootApplicationCoordinator.swift; sourceTree = "<group>"; };
 		4D2D9D5E1DB0C54629832563 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4EB05E9872FBCFE16A1703C4 /* CoreKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CoreKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -385,6 +391,7 @@
 			isa = PBXGroup;
 			children = (
 				40ADE2CF27D162EB00763083 /* schedule-student-200.json */,
+				40ADE2F527D58E6A00763083 /* schedule-teacher-200.json */,
 			);
 			path = ScheduleService;
 			sourceTree = "<group>";
@@ -424,6 +431,8 @@
 			children = (
 				40ADE2ED27D571A400763083 /* DisciplineCell.swift */,
 				40ADE2EF27D5732500763083 /* UrlCell.swift */,
+				40ADE2F127D57F6A00763083 /* ButtonCell.swift */,
+				40ADE2F327D5819300763083 /* CommentCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -745,6 +754,7 @@
 			files = (
 				403EC3E827D01ABB00BE86C7 /* profile-teacher-200.json in Resources */,
 				403EC3EA27D01ACA00BE86C7 /* profile-student-200.json in Resources */,
+				40ADE2F627D58E6A00763083 /* schedule-teacher-200.json in Resources */,
 				403EC3B827CFE44900BE86C7 /* auth-teacher-200.json in Resources */,
 				40ADE2D027D162EB00763083 /* schedule-student-200.json in Resources */,
 				402AF01527CFD38600BDFAC4 /* auth-student-200.json in Resources */,
@@ -806,6 +816,7 @@
 				403EC3BD27CFEC3500BE86C7 /* SheduleCoordinator.swift in Sources */,
 				40ADE2D827D1737700763083 /* LessonCell.swift in Sources */,
 				403EC3D627CFFA4000BE86C7 /* ProfileView.swift in Sources */,
+				40ADE2F427D5819300763083 /* CommentCell.swift in Sources */,
 				403EC3C927CFFA3300BE86C7 /* NewsModule.swift in Sources */,
 				403EC3E127CFFA4C00BE86C7 /* ScheduleConfigurator.swift in Sources */,
 				403EC3F127D03A9D00BE86C7 /* PhotoCell.swift in Sources */,
@@ -814,6 +825,7 @@
 				FEAFD9869A3C098BD9AC1FDD /* UIColor+colors.swift in Sources */,
 				B6B016666C922F4067EBD488 /* UITextFieldWithInset.swift in Sources */,
 				403EC3F727D0452500BE86C7 /* HeaderCell.swift in Sources */,
+				40ADE2F227D57F6A00763083 /* ButtonCell.swift in Sources */,
 				403EC3BF27CFEC3E00BE86C7 /* NewsCoordinator.swift in Sources */,
 				403EC3BB27CFE83400BE86C7 /* MainCoordinator.swift in Sources */,
 				403EC3CB27CFFA3300BE86C7 /* NewsInteractor.swift in Sources */,

@@ -8,6 +8,7 @@ final class SchedulePresenter: SchedulePresenterInput {
 
     func present(_ response: ScheduleModule.UseCase.Load.Response) {
         view?.viewModel.days = response.schedule.days
+        view?.viewModel.role = response.role
     }
 
     func presentIsLoading(_ value: Bool) {

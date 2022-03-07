@@ -31,7 +31,6 @@ final class UrlCell: UITableViewCell {
         } else {
             urlButton.setTitle(placeholder, for: .normal)
             urlButton.setTitleColor(.black, for: .normal)
-
         }
     }
 
@@ -51,9 +50,8 @@ final class UrlCell: UITableViewCell {
         }
         urlButton.snp.makeConstraints {
             $0.top.equalTo(titleLabel.snp.bottom).offset(4)
-            $0.leading.equalToSuperview().offset(cellOffset)
-            $0.trailing.equalToSuperview().offset(-cellOffset)
             $0.bottom.equalToSuperview().offset(-cellOffset)
+            $0.centerX.equalToSuperview()
         }
     }
 

@@ -26,6 +26,9 @@ final class LessonDetailView: UIViewController, LessonDetailViewInput {
     }
 
     private func setupSubviews() {
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(hideKeyboard))
+        tapGesture.cancelsTouchesInView = false
+        view.addGestureRecognizer(tapGesture)
         view.backgroundColor = .white
         tableView.backgroundColor = .white
         tableView.separatorStyle = .none
@@ -34,6 +37,8 @@ final class LessonDetailView: UIViewController, LessonDetailViewInput {
         tableView.allowsSelection = false
         tableView.register(DisciplineCell.self, forCellReuseIdentifier: DisciplineCell.reuseIdentifier)
         tableView.register(UrlCell.self, forCellReuseIdentifier: UrlCell.reuseIdentifier)
+        tableView.register(CommentCell.self, forCellReuseIdentifier: CommentCell.reuseIdentifier)
+        tableView.register(ButtonCell.self, forCellReuseIdentifier: ButtonCell.reuseIdentifier)
         view.addSubview(tableView)
     }
 
@@ -52,7 +57,14 @@ final class LessonDetailView: UIViewController, LessonDetailViewInput {
             .sink(receiveValue: { [weak self] _ in self?.tableView.reloadData() })
             .store(in: &cancellables)
     }
+
+    @objc
+    private func hideKeyboard() {
+        view.endEditing(true)
+    }
 }
+
+
 
 extension LessonDetailView: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -78,11 +90,18 @@ extension LessonDetailView: UITableViewDelegate, UITableViewDataSource {
             cell.configure(title: title, placeholder: placeholder, urlString: urlString)
             return cell
         case .commentFieldCell(let title, let text, let commentsIsEditable):
-            return UITableViewCell()
-        case .buttonCell(model: let model):
-            return UITableViewCell()
+            guard
+                let cell = tableView.dequeueReusableCell(withIdentifier: CommentCell.reuseIdentifier) as? CommentCell
+            else { return UITableViewCell() }
+            cell.configure(title: title, text: text, commentsIsEditable: commentsIsEditable)
+            return cell
+        case .buttonCell(let title):
+            guard
+                let cell = tableView.dequeueReusableCell(withIdentifier: ButtonCell.reuseIdentifier) as? ButtonCell
+            else { return UITableViewCell() }
+            cell.configure(title: title)
+            return cell
         }
-            return UITableViewCell()
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
